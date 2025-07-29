@@ -1,0 +1,104 @@
+2:I[8352,["913","static/chunks/app/%5Blocale%5D/services/laser/page-0ec1cb5259836177.js"],""]
+3:I[7048,[],""]
+5:I[2039,[],""]
+6:I[5946,["203","static/chunks/app/%5Blocale%5D/layout-dc6633d34dba0e69.js"],"default"]
+7:I[3135,["816","static/chunks/app/%5Blocale%5D/error-d3ccc7e8c9b27692.js"],"default"]
+9:I[3309,["601","static/chunks/app/error-34250c91fa8f6e5f.js"],"default"]
+4:["locale","en","d"]
+8:T75e,/* Minimal Critical CSS - Inline for fastest LCP */
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --secondary: #f59e0b;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.header-critical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.logo-critical {
+  height: 50px;
+  width: auto;
+}
+.hero-critical {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 80px 1rem 0;
+}
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin: 0 0 2rem;
+  opacity: 0.95;
+  max-width: 600px;
+}
+.cta-button {
+  background: #1d4ed8; /* blue-700 - better contrast */
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+.cta-button:hover {
+  background: #1e3a8a; /* blue-800 - even darker on hover */
+}
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+0:["XxdcWkxq1ZAGzejLjz2Z4",[[["",{"children":[["locale","en","d"],{"children":["services",{"children":["laser",{"children":["__PAGE__?{\"locale\":\"en\"}",{}]}]}]}]},"$undefined","$undefined",true],["",{"children":[["locale","en","d"],{"children":["services",{"children":["laser",{"children":["__PAGE__",{},[["$L1",["$","div",null,{"className":"py-16","children":["$","div",null,{"className":"container mx-auto px-4","children":[["$","div",null,{"className":"text-center mb-16","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"Advanced Laser Treatments"}],["$","p",null,{"className":"text-xl text-gray-600 max-w-3xl mx-auto","children":"Discover the latest laser technologies at NHMC Ras Al Khaimah. We offer a comprehensive range of safe and effective laser treatments."}]]}],["$","div",null,{"className":"grid md:grid-cols-2 gap-8 mb-16","children":[["$","div","laser-hair-removal",{"className":"bg-white rounded-lg shadow-lg overflow-hidden","children":["$","div",null,{"className":"p-6","children":[["$","h3",null,{"className":"text-2xl font-semibold mb-3","children":"Laser Hair Removal"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"Advanced laser technology for permanent hair reduction on all skin types."}],["$","div",null,{"className":"space-y-2 text-sm text-gray-500","children":[["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Price:"}],["$","span",null,{"children":"Starting from AED 200"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Duration:"}],["$","span",null,{"children":"30-60 minutes"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Sessions:"}],["$","span",null,{"children":"6-8 sessions recommended"}]]}]]}],["$","$L2",null,{"href":"/en/contact","className":"mt-4 block w-full bg-primary-600 text-white text-center py-2 rounded-lg hover:bg-primary-700 transition-colors","children":"Book Consultation"}]]}]}],["$","div","laser-skin-rejuvenation",{"className":"bg-white rounded-lg shadow-lg overflow-hidden","children":["$","div",null,{"className":"p-6","children":[["$","h3",null,{"className":"text-2xl font-semibold mb-3","children":"Laser Skin Rejuvenation"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"Revolutionary laser treatment to improve skin texture, reduce wrinkles, and enhance skin tone."}],["$","div",null,{"className":"space-y-2 text-sm text-gray-500","children":[["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Price:"}],["$","span",null,{"children":"Starting from AED 500"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Duration:"}],["$","span",null,{"children":"45-90 minutes"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Sessions:"}],["$","span",null,{"children":"3-5 sessions recommended"}]]}]]}],["$","$L2",null,{"href":"/en/contact","className":"mt-4 block w-full bg-primary-600 text-white text-center py-2 rounded-lg hover:bg-primary-700 transition-colors","children":"Book Consultation"}]]}]}],["$","div","laser-acne-treatment",{"className":"bg-white rounded-lg shadow-lg overflow-hidden","children":["$","div",null,{"className":"p-6","children":[["$","h3",null,{"className":"text-2xl font-semibold mb-3","children":"Laser Acne Treatment"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"Target acne and acne scars with precision laser therapy for clearer, smoother skin."}],["$","div",null,{"className":"space-y-2 text-sm text-gray-500","children":[["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Price:"}],["$","span",null,{"children":"Starting from AED 400"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Duration:"}],["$","span",null,{"children":"30-45 minutes"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Sessions:"}],["$","span",null,{"children":"4-6 sessions recommended"}]]}]]}],["$","$L2",null,{"href":"/en/contact","className":"mt-4 block w-full bg-primary-600 text-white text-center py-2 rounded-lg hover:bg-primary-700 transition-colors","children":"Book Consultation"}]]}]}],["$","div","laser-pigmentation",{"className":"bg-white rounded-lg shadow-lg overflow-hidden","children":["$","div",null,{"className":"p-6","children":[["$","h3",null,{"className":"text-2xl font-semibold mb-3","children":"Laser Pigmentation Treatment"}],["$","p",null,{"className":"text-gray-600 mb-4","children":"Effectively treat dark spots, melasma, and hyperpigmentation for even skin tone."}],["$","div",null,{"className":"space-y-2 text-sm text-gray-500","children":[["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Price:"}],["$","span",null,{"children":"Starting from AED 350"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Duration:"}],["$","span",null,{"children":"30-60 minutes"}]]}],["$","div",null,{"className":"flex justify-between","children":[["$","span",null,{"children":"Sessions:"}],["$","span",null,{"children":"3-6 sessions recommended"}]]}]]}],["$","$L2",null,{"href":"/en/contact","className":"mt-4 block w-full bg-primary-600 text-white text-center py-2 rounded-lg hover:bg-primary-700 transition-colors","children":"Book Consultation"}]]}]}]]}],["$","div",null,{"className":"bg-gray-50 rounded-lg p-8 mb-16","children":[["$","h2",null,{"className":"text-3xl font-bold text-center mb-8","children":"Why Choose Our Laser Treatments?"}],["$","div",null,{"className":"grid md:grid-cols-3 gap-6","children":[["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-primary-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl","children":"🔬"}]}],["$","h3",null,{"className":"text-xl font-semibold mb-2","children":"Advanced Technology"}],["$","p",null,{"className":"text-gray-600","children":"We use the latest internationally certified laser equipment"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-primary-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl","children":"👨‍⚕️"}]}],["$","h3",null,{"className":"text-xl font-semibold mb-2","children":"Expert Doctors"}],["$","p",null,{"className":"text-gray-600","children":"Team of specialized and trained doctors"}]]}],["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"bg-primary-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4","children":["$","span",null,{"className":"text-2xl","children":"✅"}]}],["$","h3",null,{"className":"text-xl font-semibold mb-2","children":"Guaranteed Results"}],["$","p",null,{"className":"text-gray-600","children":"Safe and effective results with satisfaction guarantee"}]]}]]}]]}],["$","div",null,{"className":"text-center","children":[["$","h3",null,{"className":"text-2xl font-bold mb-4","children":"Ready to Start Your Treatment?"}],["$","p",null,{"className":"text-gray-600 mb-6","children":"Contact us today to book a free consultation with our experts"}],["$","div",null,{"className":"flex flex-col sm:flex-row gap-4 justify-center","children":[["$","$L2",null,{"href":"/en/contact","className":"bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors","children":"Book Free Consultation"}],["$","$L2",null,{"href":"tel:+97172441370","className":"border border-primary-600 text-primary-600 px-8 py-3 rounded-lg hover:bg-primary-50 transition-colors","children":"Call Us Now"}]]}]]}]]}]}],null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","services","children","laser","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children","services","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[null,["$","$L6",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","$4","children"],"error":"$7","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"max-w-md w-full text-center","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-9xl font-bold text-primary-600","children":"404"}],["$","h2",null,{"className":"text-2xl font-bold text-gray-900 dark:text-white mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 mb-8","children":"The page you are looking for does not exist in this language."}]]}],["$","div",null,{"className":"space-y-4","children":[["$","$L2",null,{"href":"/en","className":"inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors mr-4","children":"Go to English Home"}],["$","$L2",null,{"href":"/ar","className":"inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors","children":"الذهاب للرئيسية العربية"}]]}],["$","div",null,{"className":"mt-8","children":["$","$L2",null,{"href":"/","className":"text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors","children":"← Back to Home"}]}]]}]}],"notFoundStyles":[]}]}]],null],[["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"flex flex-col items-center space-y-4","children":[["$","div",null,{"className":"animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 text-lg","children":"Loading..."}],["$","p",null,{"className":"text-gray-500 dark:text-gray-400 text-sm","children":"Preparing your content..."}]]}]}],[],[]]]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2098cab6dcf2ce75.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","dir":"ltr","children":[["$","head",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n            (function() {\n              // Force light mode by default and remove any dark class\n              document.documentElement.classList.remove('dark');\n              // Only apply dark mode if explicitly saved\n              var theme = localStorage.getItem('theme');\n              if (theme === 'dark') {\n                document.documentElement.classList.add('dark');\n              }\n            })();\n          "}}],["$","link",null,{"rel":"preload","href":"/images/logo.jpg","as":"image","fetchPriority":"high"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n            (function() {\n              // Load fonts asynchronously\n              const fontUrls = [\n                'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',\n                'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap'\n              ];\n\n              fontUrls.forEach(function(url) {\n                var link = document.createElement('link');\n                link.href = url;\n                link.rel = 'stylesheet';\n                link.media = 'print';\n                link.onload = function() { this.media = 'all'; };\n                document.head.appendChild(link);\n              });\n            })();\n          "}}],["$","link",null,{"rel":"dns-prefetch","href":"//fonts.googleapis.com"}],["$","link",null,{"rel":"dns-prefetch","href":"//api.cohere.ai"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"dns-prefetch","href":"//fonts.googleapis.com"}],["$","link",null,{"rel":"dns-prefetch","href":"//api.cohere.ai"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}]]}],["$","body",null,{"className":"font-poppins ltr","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"max-w-md w-full text-center","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-9xl font-bold text-primary-600","children":"404"}],["$","h2",null,{"className":"text-2xl font-bold text-gray-900 dark:text-white mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 mb-8","children":"The page you are looking for does not exist."}]]}],["$","div",null,{"className":"space-y-4","children":[["$","$L2",null,{"href":"/en","className":"inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors","children":"Go to English Home"}],["$","div",null,{"children":["$","$L2",null,{"href":"/ar","className":"inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors mr-4","children":"الذهاب للرئيسية العربية"}]}]]}]]}]}],"notFoundStyles":[]}]}]]}]],null],[["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"flex flex-col items-center space-y-4","children":[["$","div",null,{"className":"animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 text-lg","children":"Loading..."}]]}]}],[],[]]],["$La",null]]]]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#ffffff"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#1f2937"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"Laser Treatments | NHMC Ras Al Khaimah | ALWEAM CENTER RAK | Weam Center"}],["$","meta","5",{"name":"description","content":"Discover our advanced laser treatments at NHMC Ras Al Khaimah. Laser hair removal, skin rejuvenation, and other cutting-edge laser therapies."}],["$","meta","6",{"name":"application-name","content":"ALWEAM CENTER"}],["$","meta","7",{"name":"author","content":"ALWEAM CENTER"}],["$","link","8",{"rel":"manifest","href":"/manifest.json","crossOrigin":"use-credentials"}],["$","meta","9",{"name":"keywords","content":"healthcare ras al khaimah,aesthetic treatments RAK,dental clinic ras al khaimah,laser hair removal RAK,medical center UAE,cosmetic treatments,wellness services"}],["$","meta","10",{"name":"creator","content":"ALWEAM CENTER"}],["$","meta","11",{"name":"publisher","content":"ALWEAM CENTER"}],["$","meta","12",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","13",{"name":"googlebot","content":"index, follow"}],["$","link","14",{"rel":"canonical","href":"https://www.weamcenter.com/en/"}],["$","link","15",{"rel":"alternate","hrefLang":"en","href":"https://www.weamcenter.com/en/"}],["$","link","16",{"rel":"alternate","hrefLang":"ar","href":"https://www.weamcenter.com/ar/"}],["$","meta","17",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","18",{"name":"apple-mobile-web-app-title","content":"ALWEAM CENTER"}],["$","meta","19",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","20",{"property":"og:title","content":"ALWEAM CENTER RAK - Advanced Healthcare & Aesthetic Excellence"}],["$","meta","21",{"property":"og:description","content":"Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah. Specializing in advanced aesthetic treatments, comprehensive dental care, cutting-edge laser procedures & holistic wellness services."}],["$","meta","22",{"property":"og:url","content":"https://www.weamcenter.com/en/"}],["$","meta","23",{"property":"og:locale","content":"en_US"}],["$","meta","24",{"property":"og:locale:alternate","content":"ar_AE"}],["$","meta","25",{"name":"twitter:card","content":"summary"}],["$","meta","26",{"name":"twitter:title","content":"ALWEAM CENTER RAK - Advanced Healthcare & Aesthetic Excellence"}],["$","meta","27",{"name":"twitter:description","content":"Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah."}],["$","link","28",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","29",{"rel":"icon","href":"/favicon.svg"}],["$","link","30",{"rel":"apple-touch-icon","href":"/favicon.svg"}]]
+1:null

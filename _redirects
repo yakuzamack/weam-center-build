@@ -1,0 +1,11 @@
+/* /.netlify/functions/ssr 200
+
+# Redirect all HTTP traffic to HTTPS
+http://yakuzamack.github.io/weamcenter/* https://yakuzamack.github.io/weamcenter/:splat 301!
+
+# Handle trailing slashes
+/weamcenter  /weamcenter/  301
+/weamcenter/ar  /weamcenter/ar/  301
+
+# Handle specific routes
+/weamcenter/* /weamcenter/index.html  200

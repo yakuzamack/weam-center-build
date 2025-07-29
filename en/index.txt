@@ -1,0 +1,124 @@
+2:"$Sreact.suspense"
+3:I[4985,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"PreloadCss"]
+d:I[5946,["203","static/chunks/app/%5Blocale%5D/layout-dc6633d34dba0e69.js"],"default"]
+e:I[7048,[],""]
+10:I[3135,["816","static/chunks/app/%5Blocale%5D/error-d3ccc7e8c9b27692.js"],"default"]
+11:I[2039,[],""]
+12:I[8352,["82","static/chunks/app/%5Blocale%5D/not-found-6614cc2e669c7ebf.js"],""]
+14:I[3309,["601","static/chunks/app/error-34250c91fa8f6e5f.js"],"default"]
+f:["locale","en","d"]
+13:T75e,/* Minimal Critical CSS - Inline for fastest LCP */
+:root {
+  --primary: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --secondary: #f59e0b;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+.header-critical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.logo-critical {
+  height: 50px;
+  width: auto;
+}
+.hero-critical {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 80px 1rem 0;
+}
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin: 0 0 2rem;
+  opacity: 0.95;
+  max-width: 600px;
+}
+.cta-button {
+  background: #1d4ed8; /* blue-700 - better contrast */
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+.cta-button:hover {
+  background: #1e3a8a; /* blue-800 - even darker on hover */
+}
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+0:["XxdcWkxq1ZAGzejLjz2Z4",[[["",{"children":[["locale","en","d"],{"children":["__PAGE__?{\"locale\":\"en\"}",{}]}]},"$undefined","$undefined",true],["",{"children":[["locale","en","d"],{"children":["__PAGE__",{},[["$L1",["$","main",null,{"className":"min-h-screen","children":[["$","$2",null,{"fallback":null,"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/OptimizedHero"]}],"$L4"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-96 rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/About"]}],"$L5"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-screen rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Services"]}],"$L6"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-96 rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Doctors"]}],"$L7"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-screen rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Pricing"]}],"$L8"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center py-16","children":["$","div",null,{"className":"loading-skeleton w-full h-32 rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Stats"]}],"$L9"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-96 rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Gallery"]}],"$La"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-96 rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Testimonials"]}],"$Lb"]}],["$","$2",null,{"fallback":["$","div",null,{"className":"min-h-screen flex items-center justify-center ","children":["$","div",null,{"className":"loading-skeleton w-full h-screen rounded-lg"}]}],"children":[["$","$L3",null,{"moduleIds":["app/[locale]/page.tsx -> @/components/sections/Contact"]}],"$Lc"]}]]}],null],null],null]},[[null,["$","$Ld",null,{"children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children","$f","children"],"error":"$10","errorStyles":[],"errorScripts":[],"template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"max-w-md w-full text-center","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-9xl font-bold text-primary-600","children":"404"}],["$","h2",null,{"className":"text-2xl font-bold text-gray-900 dark:text-white mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 mb-8","children":"The page you are looking for does not exist in this language."}]]}],["$","div",null,{"className":"space-y-4","children":[["$","$L12",null,{"href":"/en","className":"inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors mr-4","children":"Go to English Home"}],["$","$L12",null,{"href":"/ar","className":"inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors","children":"الذهاب للرئيسية العربية"}]]}],["$","div",null,{"className":"mt-8","children":["$","$L12",null,{"href":"/","className":"text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors","children":"← Back to Home"}]}]]}]}],"notFoundStyles":[]}]}]],null],[["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"flex flex-col items-center space-y-4","children":[["$","div",null,{"className":"animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 text-lg","children":"Loading..."}],["$","p",null,{"className":"text-gray-500 dark:text-gray-400 text-sm","children":"Preparing your content..."}]]}]}],[],[]]]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2098cab6dcf2ce75.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","dir":"ltr","children":[["$","head",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$13"}}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n            (function() {\n              // Force light mode by default and remove any dark class\n              document.documentElement.classList.remove('dark');\n              // Only apply dark mode if explicitly saved\n              var theme = localStorage.getItem('theme');\n              if (theme === 'dark') {\n                document.documentElement.classList.add('dark');\n              }\n            })();\n          "}}],["$","link",null,{"rel":"preload","href":"/images/logo.jpg","as":"image","fetchPriority":"high"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n            (function() {\n              // Load fonts asynchronously\n              const fontUrls = [\n                'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap',\n                'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap'\n              ];\n\n              fontUrls.forEach(function(url) {\n                var link = document.createElement('link');\n                link.href = url;\n                link.rel = 'stylesheet';\n                link.media = 'print';\n                link.onload = function() { this.media = 'all'; };\n                document.head.appendChild(link);\n              });\n            })();\n          "}}],["$","link",null,{"rel":"dns-prefetch","href":"//fonts.googleapis.com"}],["$","link",null,{"rel":"dns-prefetch","href":"//api.cohere.ai"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}],["$","link",null,{"rel":"dns-prefetch","href":"//fonts.googleapis.com"}],["$","link",null,{"rel":"dns-prefetch","href":"//api.cohere.ai"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":""}]]}],["$","body",null,{"className":"font-poppins ltr","children":["$","$Le",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$14","errorStyles":[],"errorScripts":[],"template":["$","$L11",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"max-w-md w-full text-center","children":[["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-9xl font-bold text-primary-600","children":"404"}],["$","h2",null,{"className":"text-2xl font-bold text-gray-900 dark:text-white mb-4","children":"Page Not Found"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 mb-8","children":"The page you are looking for does not exist."}]]}],["$","div",null,{"className":"space-y-4","children":[["$","$L12",null,{"href":"/en","className":"inline-block bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors","children":"Go to English Home"}],["$","div",null,{"children":["$","$L12",null,{"href":"/ar","className":"inline-block bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors mr-4","children":"الذهاب للرئيسية العربية"}]}]]}]]}]}],"notFoundStyles":[]}]}]]}]],null],[["$","div",null,{"className":"min-h-screen flex items-center justify-center bg-white dark:bg-gray-900","children":["$","div",null,{"className":"flex flex-col items-center space-y-4","children":[["$","div",null,{"className":"animate-spin rounded-full h-16 w-16 border-b-2 border-primary-600"}],["$","p",null,{"className":"text-gray-600 dark:text-gray-300 text-lg","children":"Loading..."}]]}]}],[],[]]],["$L15",null]]]]
+16:I[8663,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+17:I[5937,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+18:I[9245,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+19:I[570,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+1a:I[1580,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+1b:I[1721,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+1c:I[6236,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+1d:I[7101,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+1e:I[1496,["61","static/chunks/app/%5Blocale%5D/page-203689fe25ecaeda.js"],"default"]
+4:["$","$L16",null,{"locale":"en"}]
+5:["$","$L17",null,{"locale":"en"}]
+6:["$","$L18",null,{"locale":"en"}]
+7:["$","$L19",null,{"locale":"en"}]
+8:["$","$L1a",null,{"locale":"en"}]
+9:["$","$L1b",null,{"locale":"en"}]
+a:["$","$L1c",null,{"locale":"en"}]
+b:["$","$L1d",null,{"locale":"en"}]
+c:["$","$L1e",null,{"locale":"en"}]
+15:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#ffffff"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#1f2937"}],["$","meta","3",{"charSet":"utf-8"}],["$","title","4",{"children":"ALWEAM CENTER RAK | Advanced Healthcare & Aesthetic Excellence | ALWEAM CENTER | Weam Center"}],["$","meta","5",{"name":"description","content":"Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah. Specializing in advanced aesthetic treatments, comprehensive dental care, cutting-edge laser procedures & holistic wellness services."}],["$","meta","6",{"name":"application-name","content":"ALWEAM CENTER"}],["$","meta","7",{"name":"author","content":"ALWEAM CENTER"}],["$","link","8",{"rel":"manifest","href":"/manifest.json","crossOrigin":"use-credentials"}],["$","meta","9",{"name":"keywords","content":"healthcare ras al khaimah, aesthetic treatments RAK, dental clinic ras al khaimah, laser hair removal RAK"}],["$","meta","10",{"name":"creator","content":"ALWEAM CENTER"}],["$","meta","11",{"name":"publisher","content":"ALWEAM CENTER"}],["$","meta","12",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","13",{"name":"googlebot","content":"index, follow"}],["$","link","14",{"rel":"canonical","href":"https://www.weamcenter.com/en/"}],["$","link","15",{"rel":"alternate","hrefLang":"en","href":"https://www.weamcenter.com/en/"}],["$","link","16",{"rel":"alternate","hrefLang":"ar","href":"https://www.weamcenter.com/ar/"}],["$","meta","17",{"name":"apple-mobile-web-app-capable","content":"yes"}],["$","meta","18",{"name":"apple-mobile-web-app-title","content":"ALWEAM CENTER"}],["$","meta","19",{"name":"apple-mobile-web-app-status-bar-style","content":"default"}],["$","meta","20",{"property":"og:title","content":"ALWEAM CENTER RAK - Advanced Healthcare & Aesthetic Excellence"}],["$","meta","21",{"property":"og:description","content":"Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah. Specializing in advanced aesthetic treatments, comprehensive dental care, cutting-edge laser procedures & holistic wellness services."}],["$","meta","22",{"property":"og:url","content":"https://www.weamcenter.com/en/"}],["$","meta","23",{"property":"og:locale","content":"en_US"}],["$","meta","24",{"property":"og:locale:alternate","content":"ar_AE"}],["$","meta","25",{"name":"twitter:card","content":"summary"}],["$","meta","26",{"name":"twitter:title","content":"ALWEAM CENTER RAK - Advanced Healthcare & Aesthetic Excellence"}],["$","meta","27",{"name":"twitter:description","content":"Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah."}],["$","link","28",{"rel":"shortcut icon","href":"/favicon.svg"}],["$","link","29",{"rel":"icon","href":"/favicon.svg"}],["$","link","30",{"rel":"apple-touch-icon","href":"/favicon.svg"}]]
+1:null
