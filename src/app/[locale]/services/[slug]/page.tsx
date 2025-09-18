@@ -9,24 +9,28 @@ interface ServiceSlugPageProps {
 
 // Return cartesian of locales x slugs for static export
 export function generateStaticParams() {
-  const locales = ['en', 'ar'];
+  const locales = ['en', 'ar', 'en.html', 'ar.html'];
   return locales.flatMap((locale) => getServices().map((s) => ({ locale, slug: s.slug })));
 }
 
 export async function generateMetadata({ params }: ServiceSlugPageProps): Promise<Metadata> {
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const slug = params?.slug;
   const t = tn(locale, 'services');
   const service = getServiceBySlug(slug);
   if (!service) return { title: 'Service Not Found' };
   return {
-    title: `${t(`${service.key}.title`)} – Al WEAM Medical Centre`,
+    title: `${t(`${service.key}.title`)} – ${locale === 'ar' ? 'مركز الوئام' : 'Al WEAM Medical Centre'}`,
     description: t(`${service.key}.description`),
   };
 }
 
 export default async function ServiceSlugPage(props: ServiceSlugPageProps) {
-  const locale = props?.params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = props?.params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const slug = props?.params?.slug;
   const t = tn(locale, 'services');
   const nav = tn(locale, 'navigation');
@@ -52,7 +56,7 @@ export default async function ServiceSlugPage(props: ServiceSlugPageProps) {
             description: t(`${service.key}.description`),
             provider: {
               '@type': 'MedicalOrganization',
-              name: locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+              name: locale === 'ar' ? 'مركز الوئام' : 'Al WEAM Medical Centre',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Riyadh',

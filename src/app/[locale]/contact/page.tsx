@@ -7,7 +7,9 @@ interface ContactPageProps {
 }
 
 export async function generateMetadata({ params }: ContactPageProps): Promise<Metadata> {
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const t = tn(locale, 'contact');
   return {
     title: t('metaTitle'),
@@ -19,7 +21,9 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
 }
 
 export default function ContactPage({ params }: ContactPageProps) {
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const t = tn(locale, 'contact');
   const nav = tn(locale, 'navigation');
 
@@ -254,5 +258,5 @@ export default function ContactPage({ params }: ContactPageProps) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ar' }];
+  return [{ locale: 'en' }, { locale: 'ar' }, { locale: 'en.html' }, { locale: 'ar.html' }];
 }

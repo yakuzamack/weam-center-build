@@ -5,7 +5,9 @@ import type { ReactNode } from 'react';
 import '../globals.css';
 
 export async function generateMetadata({ params }: { params: { locale: string } }) {
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://alweammedical.com';
 
   return {
@@ -17,7 +19,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       },
     },
     openGraph: {
-      siteName: locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+      siteName: locale === 'ar' ? 'مركز الوئام' : 'Al WEAM Medical Centre',
       locale: locale === 'ar' ? 'ar_SA' : 'en_US',
       type: 'website',
     },
@@ -25,7 +27,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       card: 'summary_large_image',
     },
     other: {
-      'application-name': locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+      'application-name': locale === 'ar' ? 'مركز الوئام' : 'Al WEAM Medical Centre',
     },
   };
 }
@@ -37,7 +39,9 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const tNav = tn(locale, 'navigation');
   const navLabels = {
     brand: tNav('brandName'),
@@ -55,7 +59,7 @@ export default async function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'MedicalOrganization',
-              name: locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+              name: locale === 'ar' ? 'مركز الوئام' : 'Al WEAM Medical Centre',
               description:
                 locale === 'ar'
                   ? 'خدمات متخصصة في الأمراض الجلدية والليزر والحجامة والعناية بالبشرة في الرياض'

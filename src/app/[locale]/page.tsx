@@ -1,3 +1,4 @@
+import { CountdownTimer } from '@/components/CountdownTimer';
 import { tn } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -9,7 +10,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   // Defensive: Next export has been invoking this with an undefined params object intermittently.
   // Fallback to 'en' so the build does not crash while we investigate upstream cause.
-  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = params?.locale || 'en';
+  // Strip .html extension if present (for static export compatibility)
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const tHome = tn(locale, 'homepage');
   return {
     title: tHome('metaTitle'),
@@ -20,62 +24,32 @@ export async function generateMetadata({
   };
 }
 
-function CountdownTimer({ locale }: { locale: string }) {
-  const tOffer = tn(locale, 'homepage');
-
-  return (
-    <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6 rounded-lg shadow-lg mb-8">
-      <div className="text-center">
-        <h3 className="text-2xl font-bold mb-2">{tOffer('specialOffer.title')}</h3>
-        <p className="text-lg mb-2">{tOffer('specialOffer.subtitle')}</p>
-        <p className="text-xl font-semibold mb-4">{tOffer('specialOffer.value')}</p>
-        <div className="flex justify-center items-center gap-4 mb-4">
-          <div className="text-center">
-            <div className="text-2xl font-bold">24</div>
-            <div className="text-sm">{tOffer('specialOffer.hours')}</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">59</div>
-            <div className="text-sm">{tOffer('specialOffer.minutes')}</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">59</div>
-            <div className="text-sm">{tOffer('specialOffer.seconds')}</div>
-          </div>
-        </div>
-        <a
-          href="https://wa.me/971555373443"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-        >
-          {tOffer('specialOffer.whatsapp')}
-        </a>
-      </div>
-    </div>
-  );
-}
-
 export default function Home(props: { params: { locale: string } }) {
-  const locale = props?.params?.locale === 'ar' ? 'ar' : 'en';
+  const rawLocale = props?.params?.locale || 'en';
+  // Strip .html extension if present (for static export compatibility)
+  const cleanLocale = rawLocale.replace('.html', '');
+  const locale = cleanLocale === 'ar' ? 'ar' : 'en';
   const tHome = tn(locale, 'homepage');
 
   return (
-    <main>
+    <main className="pattern-medical">
       {/* Hero Section */}
-      <section className="gradient-hero relative overflow-hidden py-24 md:py-32">
+      <section className="gradient-hero relative overflow-hidden py-24 md:py-32 pattern-waves">
         <div className="absolute inset-0 pointer-events-none [mask-image:radial-gradient(circle_at_center,white,transparent)]" />
+        <div className="absolute inset-0 pattern-dots opacity-30" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-brand-400">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-r from-brand-600 to-brand-400 animate-fade-in">
               {tHome('title')}
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in [animation-delay:0.2s]">
               {tHome('subtitle')}
             </p>
-            <p className="mt-4 text-gray-600 dark:text-gray-300">{tHome('description')}</p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <Link href={`/${locale}/contact`} className="btn-primary text-base">
+            <p className="mt-4 text-gray-600 dark:text-gray-300 animate-fade-in [animation-delay:0.4s]">
+              {tHome('description')}
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in [animation-delay:0.6s]">
+              <Link href={`/${locale}/contact`} className="btn-primary text-base shadow-glow">
                 {tHome('heroCtaPrimary')}
               </Link>
               <Link href={`/${locale}/services`} className="btn-outline text-base">
@@ -87,8 +61,8 @@ export default function Home(props: { params: { locale: string } }) {
       </section>
 
       {/* Special Offer Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-16 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pattern-grid">
+        <div className="max-w-4xl mx-auto px-6">
           <CountdownTimer locale={locale} />
         </div>
       </section>
@@ -217,5 +191,5 @@ export default function Home(props: { params: { locale: string } }) {
 }
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ar' }];
+  return [{ locale: 'en' }, { locale: 'ar' }, { locale: 'en.html' }, { locale: 'ar.html' }];
 }

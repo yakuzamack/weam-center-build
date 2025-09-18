@@ -9,6 +9,31 @@ body {
   @apply bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100 antialiased font-sans;
 }
 
+/* Beautiful Patterns and Backgrounds */
+@layer base {
+  .pattern-dots {
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-grid {
+    background-image: linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .pattern-waves {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f0f9ff' fill-opacity='0.1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,117.3C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+
+  .pattern-medical {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-opacity='0.03' fill='%234f46e5'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
 /* Reusable component styles */
 @layer components {
   .btn {
@@ -41,6 +66,145 @@ body {
   }
   .surface-glass {
     @apply bg-white/60 dark:bg-gray-900/50 backdrop-blur-md border border-white/40 dark:border-gray-700/40 shadow-soft;
+  }
+
+  /* Enhanced Offer Card Styles */
+  .offer-card {
+    @apply relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700 p-8 text-white shadow-2xl;
+  }
+
+  .offer-pattern {
+    @apply absolute inset-0 opacity-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-opacity='0.1' fill='%23ffffff'%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3Cpath d='M30 0v10M30 50v10M0 30h10M50 30h10M15 15l7 7M38 38l7 7M15 45l7-7M38 22l7-7'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .offer-content {
+    @apply relative z-10 text-center;
+  }
+
+  .offer-header {
+    @apply mb-8;
+  }
+
+  .offer-title {
+    @apply mb-3 text-3xl font-bold tracking-tight;
+  }
+
+  .offer-subtitle {
+    @apply mb-4 text-xl opacity-90;
+  }
+
+  .offer-value {
+    @apply inline-block rounded-full bg-white/20 px-6 py-2 text-lg font-semibold backdrop-blur-sm;
+  }
+
+  .countdown-grid {
+    @apply mb-8 flex items-center justify-center gap-4;
+  }
+
+  .countdown-item {
+    @apply flex flex-col items-center rounded-2xl bg-white/20 px-4 py-3 backdrop-blur-sm min-w-[80px];
+  }
+
+  .countdown-number {
+    @apply text-3xl font-bold leading-tight;
+  }
+
+  .countdown-label {
+    @apply text-sm font-medium opacity-80;
+  }
+
+  .countdown-separator {
+    @apply text-3xl font-bold opacity-50;
+  }
+
+  .whatsapp-btn {
+    @apply inline-flex items-center gap-3 rounded-2xl bg-white px-8 py-4 font-semibold text-emerald-600 shadow-lg transition-all duration-200 hover:bg-emerald-50 hover:scale-105 active:scale-95;
+  }
+
+  /* Service Card Styles */
+  .service-card {
+    @apply relative overflow-hidden rounded-3xl bg-white dark:bg-gray-900 shadow-soft hover:shadow-glow transition-all duration-300 hover:-translate-y-2;
+  }
+
+  .service-card-pattern {
+    @apply absolute top-0 right-0 w-32 h-32 opacity-5 pattern-medical;
+  }
+
+  .service-image-container {
+    @apply relative overflow-hidden;
+  }
+
+  .service-image {
+    @apply w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110;
+  }
+
+  .service-image-placeholder {
+    @apply w-full h-48 transition-transform duration-500 group-hover:scale-110;
+  }
+
+  .service-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4;
+  }
+
+  .service-overlay-content {
+    @apply transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300;
+  }
+
+  .service-icon {
+    @apply w-8 h-8 text-white;
+  }
+
+  .service-content {
+    @apply p-6;
+  }
+
+  .service-header {
+    @apply flex items-start justify-between mb-4;
+  }
+
+  .service-title {
+    @apply text-xl font-bold text-gray-900 dark:text-white mb-2;
+  }
+
+  .service-price {
+    @apply flex items-center gap-1 text-brand-600 dark:text-brand-400 font-semibold;
+  }
+
+  .price-label {
+    @apply text-sm;
+  }
+
+  .price-value {
+    @apply text-lg font-bold;
+  }
+
+  .price-currency {
+    @apply text-sm;
+  }
+
+  .service-description {
+    @apply text-gray-600 dark:text-gray-300 mb-4 leading-relaxed;
+  }
+
+  .service-features {
+    @apply flex flex-wrap gap-2 mb-6;
+  }
+
+  .feature-badge {
+    @apply inline-flex items-center gap-1 rounded-full bg-brand-50 dark:bg-brand-500/15 text-brand-700 dark:text-brand-300 px-3 py-1 text-sm font-medium;
+  }
+
+  .service-actions {
+    @apply flex gap-3;
+  }
+
+  .service-btn-primary {
+    @apply flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 text-white px-4 py-3 font-medium hover:bg-brand-500 transition-colors;
+  }
+
+  .service-btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-xl border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-4 py-3 font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors;
   }
 }
 

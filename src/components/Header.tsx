@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { ThemeToggle } from './ThemeToggle';
@@ -17,9 +18,19 @@ export function Header({ locale, labels }: HeaderProps) {
         <div className="flex items-center gap-3">
           <Link
             href={`/${locale}`}
-            className="text-lg font-bold tracking-tight bg-gradient-to-r from-brand-600 to-brand-400 text-transparent bg-clip-text"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
           >
-            {L.brand}
+            <Image
+              src="/images/logo-circular.svg"
+              alt="Al Weam Centre Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+              unoptimized
+            />
+            <span className="text-lg font-bold tracking-tight bg-gradient-to-r from-brand-600 to-brand-400 text-transparent bg-clip-text">
+              {L.brand}
+            </span>
           </Link>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
