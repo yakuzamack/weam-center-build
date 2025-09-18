@@ -1,0 +1,31 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "appointment": "Book Appointment",
+    "brandName": "Al WEAM Medical Centre"
+  },
+  "homepage": {
+    "title": "Al WEAM Medical Centre",
+    "description": "Specialized dermatology, laser, cupping, and professional skin care services in Riyadh."
+  },
+  "services": {
+    "title": "Our Services",
+    "dermatologyBeauty": {
+      "title": "Dermatology & Beauty",
+      "description": "Advanced cosmetic dermatology and skin rejuvenation treatments."
+    },
+    "laserHairRemoval": {
+      "title": "Laser Hair Removal",
+      "description": "Smooth, long-term reduction with Italian Quanta technology."
+    },
+    "cuppingHijama": {
+      "title": "Cupping Therapy",
+      "description": "Traditional therapeutic detox and circulation support."
+    },
+    "skinCleansing": {
+      "title": "Deep Skin Cleansing",
+      "description": "Professional deep facial purification and renewal."
+    }
+  }
+}
