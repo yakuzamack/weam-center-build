@@ -1,36 +1,35 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
 }
 body {
-  line-height: 1.5;
+  @apply bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100 antialiased font-sans;
 }
-.page {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
+
+/* Reusable component styles */
+@layer components {
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-lg font-semibold px-5 py-2.5 transition-colors;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 text-white hover:bg-brand-700 shadow-soft;
+  }
+  .btn-outline {
+    @apply btn border border-brand-600 text-brand-600 hover:bg-brand-50 dark:hover:bg-brand-700/30;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  .card {
+    @apply bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-6 shadow-soft hover:shadow-lg transition-shadow;
+  }
 }
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-  display: grid;
-  gap: 0.75rem;
-}
-.list a {
-  text-decoration: none;
-  color: #0b57d0;
-}
-.list a:hover {
-  text-decoration: underline;
+
+@layer utilities {
+  .gradient-hero {
+    @apply bg-gradient-to-br from-brand-50 via-white to-brand-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900;
+  }
 }
