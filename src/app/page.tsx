@@ -4,8 +4,8 @@ export default function IndexRedirect() {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta httpEquiv="refresh" content="0; url=/en" />
-        <link rel="canonical" href="/en" />
+        <meta httpEquiv="refresh" content="0; url=/en.html" />
+        <link rel="canonical" href="/en.html" />
         <title>Al WEAM Medical Centre - Redirecting...</title>
         <meta name="robots" content="noindex,follow" />
         <style>{`
@@ -26,10 +26,10 @@ export default function IndexRedirect() {
           <h1>Al WEAM Medical Centre</h1>
           <p>Redirecting to English site...</p>
           <p>
-            <a href="/en">Click here if not redirected automatically</a>
+            <a href="/en.html">Click here if not redirected automatically</a>
           </p>
           <p>
-            <a href="/ar">العربية</a>
+            <a href="/ar.html">العربية</a>
           </p>
         </div>
         <script
@@ -37,7 +37,7 @@ export default function IndexRedirect() {
             __html: `
             if (!window.location.pathname.startsWith('/en') && !window.location.pathname.startsWith('/ar')) {
               const preferArabic = navigator.language && navigator.language.startsWith('ar');
-              window.location.href = preferArabic ? '/ar' : '/en';
+              window.location.href = preferArabic ? '/ar.html' : '/en.html';
             }
           `,
           }}
