@@ -1,48 +1,179 @@
-// Static root page with meta refresh redirect to default locale
-export default function IndexRedirect() {
+import { CountdownTimer } from '@/components/CountdownTimer';
+import { FloatingElement } from '@/components/FloatingAnimations';
+import { ImprovedServiceCard } from '@/components/ImprovedServiceCard';
+import { OptimizedHero } from '@/components/OptimizedHero';
+import { getServices } from '@/data/services';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'مركز الوئام - خدمات طبية وتجميلية متميزة',
+  description:
+    'مركز الوئام للخدمات الطبية والتجميلية المتخصصة في الإمارات. نقدم علاجات الليزر والعناية بالبشرة والحجامة والعلاج الطبيعي بأحدث التقنيات.',
+  keywords:
+    'مركز طبي الإمارات, علاجات تجميلية, أمراض جلدية, إزالة الشعر بالليزر, حجامة, العناية بالبشرة, مركز الوئام',
+};
+
+export default function HomePage() {
+  const services = getServices().slice(0, 6); // Show first 6 services
+
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="refresh" content="0; url=/en.html" />
-        <link rel="canonical" href="/en.html" />
-        <title>Al WEAM Medical Centre - Redirecting...</title>
-        <meta name="robots" content="noindex,follow" />
-        <style>{`
-          body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            font-family: system-ui, sans-serif;
-            text-align: center;
-            margin: 0;
-          }
-          a { color: #4f46e5; }
-        `}</style>
-      </head>
-      <body>
-        <div>
-          <h1>Al WEAM Medical Centre</h1>
-          <p>Redirecting to English site...</p>
-          <p>
-            <a href="/en.html">Click here if not redirected automatically</a>
-          </p>
-          <p>
-            <a href="/ar.html">العربية</a>
-          </p>
+    <main className='medical-gradient-bg min-h-screen'>
+      {/* Hero Section */}
+      <OptimizedHero
+        imageType='wellness'
+        className='py-20'
+        enableParallax={true}
+      >
+        <div className='mx-auto max-w-7xl px-6'>
+          <div className='mb-16 text-center'>
+            <h1 className='mb-6 animate-fade-in text-4xl font-bold text-white drop-shadow-lg md:text-5xl lg:text-6xl'>
+              مركز الوئام للصحة الشاملة
+            </h1>
+            <p className='mx-auto max-w-3xl animate-fade-in text-xl leading-relaxed text-white/90 drop-shadow [animation-delay:0.2s]'>
+              نقدم خدمات طبية وتجميلية متميزة باستخدام أحدث التقنيات والخبرات
+              المتخصصة لصحتكم وجمالكم
+            </p>
+
+            <div className='mt-10 flex animate-fade-in flex-col justify-center gap-4 [animation-delay:0.4s] sm:flex-row'>
+              <Link
+                href='/contact'
+                className='btn-primary transform px-8 py-4 text-lg shadow-glow transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'
+              >
+                احجز موعد
+              </Link>
+              <a
+                href='https://wa.me/971555373443'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex transform items-center gap-2 rounded-xl border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white/20'
+              >
+                <svg
+                  className='h-5 w-5'
+                  fill='currentColor'
+                  viewBox='0 0 24 24'
+                >
+                  <path d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488' />
+                </svg>
+                واتساب
+              </a>
+            </div>
+          </div>
         </div>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            if (!window.location.pathname.startsWith('/en') && !window.location.pathname.startsWith('/ar')) {
-              const preferArabic = navigator.language && navigator.language.startsWith('ar');
-              window.location.href = preferArabic ? '/ar.html' : '/en.html';
-            }
-          `,
-          }}
-        />
-      </body>
-    </html>
+      </OptimizedHero>
+
+      {/* Special Offer Section */}
+      <section className='pattern-grid bg-gradient-to-br from-gray-50 via-white to-blue-50 py-16 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900'>
+        <div className='mx-auto max-w-4xl px-6'>
+          <div className='offer-card'>
+            <div className='offer-pattern'></div>
+            <div className='relative z-10'>
+              <div className='offer-content'>
+                <div className='offer-header'>
+                  <h2 className='offer-title'>عرض خاص لوقت محدود</h2>
+                  <p className='offer-subtitle'>افتتاح جديد في الرياض</p>
+                </div>
+                <div className='offer-value'>خصم 50%</div>
+                <CountdownTimer />
+                <div className='mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center'>
+                  <Link href='/contact' className='medical-button-primary'>
+                    احجز الآن
+                  </Link>
+                  <a
+                    href='tel:+971555373443'
+                    className='medical-button-secondary'
+                  >
+                    اتصل الآن
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className='bg-white px-4 py-16 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-7xl'>
+          <div className='grid grid-cols-2 gap-8 md:grid-cols-4'>
+            <div className='medical-stats-card text-center'>
+              <div className='medical-stats-number'>2,500+</div>
+              <div className='text-sm font-medium text-gray-600'>عميل راضي</div>
+              <div className='mt-1 text-xs text-green-600'>
+                +12.5% هذا العام
+              </div>
+            </div>
+            <div className='medical-stats-card text-center'>
+              <div className='medical-stats-number'>8+</div>
+              <div className='text-sm font-medium text-gray-600'>
+                خدمات متخصصة
+              </div>
+              <div className='mt-1 text-xs text-blue-600'>+2 خدمات جديدة</div>
+            </div>
+            <div className='medical-stats-card text-center'>
+              <div className='medical-stats-number'>15+</div>
+              <div className='text-sm font-medium text-gray-600'>
+                سنوات خبرة
+              </div>
+              <div className='mt-1 text-xs text-teal-600'>تأسس 2009</div>
+            </div>
+            <div className='medical-stats-card text-center'>
+              <div className='medical-stats-number'>98%</div>
+              <div className='text-sm font-medium text-gray-600'>
+                معدل النجاح
+              </div>
+              <div className='mt-1 text-xs text-green-600'>+2.1% تحسن</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview Section */}
+      <section className='py-20'>
+        <div className='mx-auto max-w-7xl px-6'>
+          <div className='mb-16 text-center'>
+            <h2 className='medical-section-title'>خدماتنا الطبية المتخصصة</h2>
+            <p className='medical-section-subtitle mx-auto max-w-3xl'>
+              نقدم مجموعة شاملة من الخدمات الطبية والتجميلية المتخصصة باستخدام
+              أحدث التقنيات الطبية
+            </p>
+          </div>
+
+          <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+            {services.map((service, index) => (
+              <FloatingElement key={service.slug} delay={index * 0.1}>
+                <ImprovedServiceCard service={service} />
+              </FloatingElement>
+            ))}
+          </div>
+
+          <div className='mt-12 text-center'>
+            <Link href='/services' className='medical-button-primary'>
+              عرض جميع الخدمات
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className='bg-white px-4 py-16 sm:px-6 lg:px-8'>
+        <div className='mx-auto max-w-4xl text-center'>
+          <h2 className='medical-section-title'>
+            احجز استشارتك المجانية اليوم
+          </h2>
+          <p className='medical-section-subtitle'>
+            فريقنا من الأطباء المتخصصين والاستشاريين جاهز لتقديم أفضل رعاية صحية
+            باستخدام أحدث التقنيات الطبية
+          </p>
+          <div className='mt-8 flex flex-col justify-center gap-4 sm:flex-row'>
+            <Link href='/contact' className='medical-button-primary'>
+              احجز الآن
+            </Link>
+            <a href='tel:+971555373443' className='medical-button-secondary'>
+              اتصل الآن
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

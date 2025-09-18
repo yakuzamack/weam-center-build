@@ -1,11 +1,11 @@
 {
-  "name": "ALWEAM CENTER - Advanced Healthcare & Aesthetic Excellence",
-  "short_name": "ALWEAM CENTER",
-  "description": "Experience world-class healthcare at ALWEAM CENTER in Ras Al Khaimah. Advanced aesthetic treatments, dental care, laser procedures & wellness services.",
+  "name": "Al Weam Centre - Premium Medical & Beauty Services",
+  "short_name": "Al Weam Centre",
+  "description": "Premium medical and beauty services including dermatology, laser hair removal, cupping therapy, and advanced skin treatments in UAE.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#7619ff",
+  "theme_color": "#4f46e5",
   "orientation": "portrait-primary",
   "icons": [
     {

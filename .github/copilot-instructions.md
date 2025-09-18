@@ -95,7 +95,7 @@ interface Service {
 
 ```css
 .btn {
-  @apply inline-flex items-center gap-2 rounded-xl font-medium px-5 py-2.5
+  @apply inline-flex items-center gap-2 rounded-xl px-5 py-2.5 font-medium
          transition-all duration-200 focus:outline-none focus-visible:ring-2
          focus-visible:ring-brand-400/70 active:scale-[.98];
 }
