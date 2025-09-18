@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run postbuild",
+    "postbuild": "cp out/en.html out/en/index.html && cp out/ar.html out/ar/index.html",
     "start": "next start",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0 .",
     "format": "prettier --write .",
