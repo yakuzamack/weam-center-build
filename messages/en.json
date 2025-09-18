@@ -2,74 +2,174 @@
   "navigation": {
     "home": "Home",
     "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
     "appointment": "Book Appointment",
-    "brandName": "Al WEAM Medical Centre"
+    "brandName": "Al Weam Centre"
   },
   "homepage": {
-    "title": "Al WEAM Medical Centre",
-    "description": "Specialized dermatology, laser, cupping, and professional skin care services in Riyadh.",
-    "metaTitle": "Al WEAM Medical Centre – Dermatology, Laser & Cupping",
-    "metaDescription": "Comprehensive dermatology, advanced laser hair removal, cupping (Hijama) and professional skin cleansing services in Riyadh.",
-    "heroCtaPrimary": "Explore Services",
-    "heroCtaSecondary": "Book Appointment"
+    "title": "Al Weam Centre – Your Trusted Partner in Health and Wellness",
+    "subtitle": "Providing comprehensive medical services with a compassionate touch.",
+    "description": "Al Weam Centre offers a wide range of medical services including general medicine, pediatrics, dermatology, orthopedics, dental care, and physiotherapy in Ras Al Khaimah, UAE.",
+    "metaTitle": "Al Weam Centre - Comprehensive Medical Services in Ras Al Khaimah",
+    "metaDescription": "Al Weam Centre offers a wide range of medical services including general medicine, pediatrics, dermatology, orthopedics, dental care, and physiotherapy in Ras Al Khaimah, UAE.",
+    "heroCtaPrimary": "Book an Appointment",
+    "heroCtaSecondary": "Explore Services",
+    "specialOffer": {
+      "title": "Special Limited Time Offer",
+      "subtitle": "Free Consultation with Personalized Treatment Plan",
+      "value": "Consultation Value 300 AED",
+      "expires": "Offer expires in:",
+      "whatsapp": "Contact via WhatsApp",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds"
+    },
+    "aboutSection": {
+      "title": "About Us",
+      "introduction": "At Al Weam Centre, we prioritize your health and well-being. Established with a commitment to excellence, our team of dedicated professionals offers personalized care in a comfortable environment.",
+      "mission": "Our mission is to deliver high-quality medical services that meet the diverse needs of our community.",
+      "values": "Compassion, Integrity, Excellence, Patient-Centered Care"
+    },
+    "servicesSection": {
+      "title": "Our Services",
+      "generalMedicine": {
+        "title": "General Medicine",
+        "description": "Comprehensive primary care for individuals and families."
+      },
+      "pediatrics": {
+        "title": "Pediatrics",
+        "description": "Specialized care for children's health and development."
+      },
+      "dermatology": {
+        "title": "Dermatology",
+        "description": "Expert treatment for skin conditions and cosmetic concerns."
+      },
+      "orthopedics": {
+        "title": "Orthopedics",
+        "description": "Advanced care for musculoskeletal issues."
+      },
+      "dentalCare": {
+        "title": "Dental Care",
+        "description": "Complete dental services, from routine check-ups to advanced procedures."
+      },
+      "physiotherapy": {
+        "title": "Physiotherapy",
+        "description": "Rehabilitation services to restore movement and function."
+      }
+    },
+    "doctorsSection": {
+      "title": "Meet Our Doctors",
+      "doctor1": {
+        "name": "Dr. Ibrahim",
+        "specialty": "Specialist in General Medicine",
+        "experience": "with over 15 years of experience."
+      },
+      "doctor2": {
+        "name": "Dr. Bachouy",
+        "specialty": "Expert in Dermatology",
+        "experience": "dedicated to patient care."
+      },
+      "doctor3": {
+        "name": "Dr. Ahmad",
+        "specialty": "Experienced Pediatrics physician",
+        "experience": "focusing on holistic health."
+      },
+      "doctor4": {
+        "name": "Dr. Sarah",
+        "specialty": "Renowned for Orthopedics",
+        "experience": "with a patient-first approach."
+      }
+    },
+    "testimonialsSection": {
+      "title": "What Our Patients Say",
+      "review1": "The team at Al Weam Centre provided exceptional care during my treatment. Highly recommend!",
+      "review2": "A welcoming environment with professional staff. My go-to clinic for all health needs.",
+      "review3": "Outstanding medical care with compassionate doctors. I trust them with my family's health."
+    }
   },
   "services": {
     "title": "Our Services",
+    "description": "Comprehensive medical services tailored to your health needs",
+    "metaTitle": "Medical Services - Al Weam Centre",
+    "metaDescription": "Explore our comprehensive range of medical services including general medicine, pediatrics, dermatology, orthopedics, dental care, and physiotherapy.",
     "dermatologyBeauty": {
       "title": "Dermatology & Beauty",
-      "description": "Advanced cosmetic dermatology and skin rejuvenation treatments."
+      "description": "Advanced cosmetic dermatology and skin rejuvenation treatments with state-of-the-art technology."
     },
     "laserHairRemoval": {
       "title": "Laser Hair Removal",
-      "description": "Smooth, long-term reduction with Italian Quanta technology."
+      "description": "Smooth, long-term hair reduction with advanced laser technology for all skin types."
     },
     "cuppingHijama": {
-      "title": "Cupping Therapy",
-      "description": "Traditional therapeutic detox and circulation support."
+      "title": "Cupping Therapy (Hijama)",
+      "description": "Traditional therapeutic cupping for detoxification and improved circulation."
     },
     "skinCleansing": {
-      "title": "Deep Skin Cleansing",
-      "description": "Professional deep facial purification and renewal."
+      "title": "Professional Skin Cleansing",
+      "description": "Deep cleansing treatments for healthy, radiant skin using professional-grade products."
+    },
+    "generalMedicine": {
+      "title": "General Medicine",
+      "description": "Comprehensive primary healthcare services for adults and families with experienced physicians."
+    },
+    "pediatrics": {
+      "title": "Pediatrics",
+      "description": "Specialized medical care for infants, children, and adolescents with child-friendly approach."
+    },
+    "dentalCare": {
+      "title": "Dental Care",
+      "description": "Complete oral healthcare from preventive care to advanced dental procedures."
+    },
+    "physiotherapy": {
+      "title": "Physiotherapy",
+      "description": "Professional rehabilitation and physical therapy services for injury recovery and mobility."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Get in touch with our healthcare professionals",
+    "metaTitle": "Contact Al Weam Centre - Book Your Appointment",
+    "metaDescription": "Contact Al Weam Centre in Ras Al Khaimah for appointments and inquiries. Call +971 55 537 3443 or visit us at Sheikh Saqr Bin Khalid Al Qasimi Street.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "service": "Select Service",
+      "message": "Message",
+      "submit": "Send Message",
+      "required": "This field is required"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Sheikh Saqr Bin Khalid Al Qasimi Street, Seih Al Ghob, Ras Al Khaimah, UAE",
+      "phone": "+971 55 537 3443",
+      "email": "info@alweamcenter.ae",
+      "hours": "Saturday - Thursday, 9:00 AM - 6:00 PM"
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "saturday": "Saturday: 9:00 AM - 6:00 PM",
+      "sunday": "Sunday: 9:00 AM - 6:00 PM",
+      "monday": "Monday: 9:00 AM - 6:00 PM",
+      "tuesday": "Tuesday: 9:00 AM - 6:00 PM",
+      "wednesday": "Wednesday: 9:00 AM - 6:00 PM",
+      "thursday": "Thursday: 9:00 AM - 6:00 PM",
+      "friday": "Friday: Closed"
     }
   },
   "notFound": {
     "title": "Page Not Found",
-    "description": "The page you are looking for does not exist or has been moved.",
-    "back": "Back to Home"
+    "description": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
   },
-  "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch with our medical team to schedule your appointment or ask any questions.",
-    "description": "Contact Al WEAM Medical Centre for appointments and inquiries about our specialized dermatology and wellness services.",
-    "info": {
-      "title": "Visit Our Center",
-      "address": "Medical Complex, King Fahd Road"
-    },
-    "hours": {
-      "title": "Opening Hours",
-      "saturday": "Saturday",
-      "sunday": "Sunday",
-      "monday": "Monday",
-      "tuesday": "Tuesday",
-      "wednesday": "Wednesday",
-      "thursday": "Thursday",
-      "friday": "Friday",
-      "closed": "Closed"
-    },
-    "form": {
-      "title": "Book Appointment",
-      "name": "Full Name",
-      "phone": "Phone Number",
-      "service": "Service",
-      "selectService": "Select a service",
-      "message": "Message (Optional)",
-      "submit": "Send Request",
-      "services": {
-        "dermatology": "Dermatology & Beauty",
-        "laser": "Laser Hair Removal",
-        "cupping": "Cupping Therapy",
-        "skincare": "Deep Skin Cleansing"
-      }
-    }
+  "footer": {
+    "description": "Specialized medical services with a compassionate touch in Ras Al Khaimah, UAE.",
+    "copyright": "© 2025 Al Weam Centre. All rights reserved.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "socialMedia": "Follow Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   }
 }

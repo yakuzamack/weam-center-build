@@ -44,7 +44,7 @@ export default async function RootLayout({
     home: tNav('home'),
     services: tNav('services'),
     appointment: tNav('appointment'),
-    contact: locale === 'ar' ? 'اتصال' : 'Contact',
+    contact: tNav('contact'),
   } as const;
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
