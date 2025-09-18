@@ -1,11 +1,29 @@
 import { getServices, type Service } from '@/data/services';
-import { getTranslations } from 'next-intl/server';
+import { tn } from '@/lib/i18n';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export default async function ServicesPage({ params }: { params: { locale: string } }) {
-  const { locale } = params;
-  const t = await getTranslations('services');
-  const nav = await getTranslations('navigation');
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const t = tn(locale, 'services');
+  return {
+    title: `${t('title')} – Al WEAM Medical Centre`,
+    description:
+      locale === 'ar'
+        ? 'مجموعة من الخدمات الطبية والتجميلية المتخصصة.'
+        : 'A collection of specialized medical & aesthetic service offerings.',
+    alternates: { languages: { en: '/en/services', ar: '/ar/services' } },
+  };
+}
+
+export default async function ServicesPage(props: { params: { locale: string } }) {
+  const locale = props?.params?.locale === 'ar' ? 'ar' : 'en';
+  const t = tn(locale, 'services');
+  const nav = tn(locale, 'navigation');
   const services = getServices();
   return (
     <main className="page">
@@ -27,13 +45,18 @@ export default async function ServicesPage({ params }: { params: { locale: strin
           <Link
             key={s.slug}
             href={`/${locale}/services/${s.slug}`}
-            className="card group flex flex-col justify-between"
+            className="card group flex flex-col justify-between hover:-translate-y-0.5 transition-transform"
           >
             <div>
-              <h2 className="text-xl font-semibold mb-2 group-hover:text-brand-600 transition-colors">
-                {t(`${s.key}.title`)}
-              </h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-5">
+              <div className="flex items-center gap-2 mb-3">
+                <h2 className="text-lg font-semibold group-hover:text-brand-600 transition-colors">
+                  {t(`${s.key}.title`)}
+                </h2>
+                {s.slug === 'laser-hair-removal' && (
+                  <span className="badge">{locale === 'ar' ? 'مميز' : 'Popular'}</span>
+                )}
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-4">
                 {t(`${s.key}.description`)}
               </p>
             </div>
@@ -46,4 +69,8 @@ export default async function ServicesPage({ params }: { params: { locale: strin
       </div>
     </main>
   );
+}
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'ar' }];
 }

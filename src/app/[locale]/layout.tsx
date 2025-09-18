@@ -1,9 +1,34 @@
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { tn } from '@/lib/i18n';
 import type { ReactNode } from 'react';
 import '../globals.css';
+
+export async function generateMetadata({ params }: { params: { locale: string } }) {
+  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://alweammedical.com';
+
+  return {
+    alternates: {
+      canonical: `${baseUrl}/${locale}`,
+      languages: {
+        en: `${baseUrl}/en`,
+        ar: `${baseUrl}/ar`,
+      },
+    },
+    openGraph: {
+      siteName: locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+      locale: locale === 'ar' ? 'ar_SA' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+    },
+    other: {
+      'application-name': locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -12,25 +37,55 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const { locale } = params;
-  // Set the active locale for static generation context
-  unstable_setRequestLocale(locale);
-  const messages = await getMessages();
+  const locale = params?.locale === 'ar' ? 'ar' : 'en';
+  const tNav = tn(locale, 'navigation');
+  const navLabels = {
+    brand: tNav('brandName'),
+    home: tNav('home'),
+    services: tNav('services'),
+    appointment: tNav('appointment'),
+    contact: locale === 'ar' ? 'اتصال' : 'Contact',
+  } as const;
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'MedicalOrganization',
+              name: locale === 'ar' ? 'مركز العافية الطبي' : 'Al WEAM Medical Centre',
+              description:
+                locale === 'ar'
+                  ? 'خدمات متخصصة في الأمراض الجلدية والليزر والحجامة والعناية بالبشرة في الرياض'
+                  : 'Specialized dermatology, laser, cupping, and professional skin care services in Riyadh',
+              url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://alweammedical.com'}/${locale}`,
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Riyadh',
+                addressCountry: 'SA',
+              },
+              contactPoint: {
+                '@type': 'ContactPoint',
+                telephone: '+966-11-123-4567',
+                contactType: 'customer service',
+              },
+              medicalSpecialty: [
+                'Dermatology',
+                'Cosmetic Medicine',
+                'Laser Medicine',
+                'Traditional Medicine',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          {/* Page Shell */}
-          <Header locale={locale} />
-          <div className="min-h-[calc(100dvh-160px)]">{children}</div>
-          <Footer />
-        </NextIntlClientProvider>
+        <Header locale={locale} labels={navLabels} />
+        <div className="min-h-[calc(100dvh-160px)]">{children}</div>
+        <Footer brand={navLabels.brand} locale={locale} />
       </body>
     </html>
   );
-}
-
-// Ensure static generation for each supported locale
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'ar' }];
 }
