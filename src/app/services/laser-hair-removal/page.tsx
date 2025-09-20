@@ -1,5 +1,4 @@
-import { StructuredData } from '@/components/StructuredData';
-import { OptimizedImage } from '@/components/OptimizedImage';
+import { LogoImage } from '@/components/OptimizedImage';
 import Link from 'next/link';
 
 export const metadata = {
@@ -105,13 +104,17 @@ export default function LaserHairRemovalPage() {
               </div>
             </div>
             <div className="relative">
-              <OptimizedImage
-                src="/images/services/laser-hair-removal.jpg"
-                alt="إزالة الشعر بالليزر - Laser Hair Removal في مركز الوئام"
-                width={600}
-                height={400}
-                className="rounded-xl shadow-lg"
-              />
+              <div className="w-full h-80 bg-gradient-to-r from-blue-100 to-teal-100 rounded-xl shadow-lg flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <p className="text-blue-600 font-semibold">إزالة الشعر بالليزر</p>
+                  <p className="text-blue-500 text-sm">Laser Hair Removal</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
