@@ -1,23 +1,38 @@
 import { CountdownTimer } from '@/components/CountdownTimer';
-import { FloatingElement } from '@/components/FloatingAnimations';
-import { ImprovedServiceCard } from '@/components/ImprovedServiceCard';
+import { ServicePreviewCard } from '@/components/ServicePreviewCard';
 import { OptimizedHero } from '@/components/OptimizedHero';
+import { StructuredData } from '@/components/StructuredData';
 import { getServices } from '@/data/services';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'مركز الوئام - خدمات طبية وتجميلية متميزة',
+  title: 'مركز الوئام للصحة الشاملة | أفضل مركز طبي وتجميلي في الإمارات',
   description:
-    'مركز الوئام للخدمات الطبية والتجميلية المتخصصة في الإمارات. نقدم علاجات الليزر والعناية بالبشرة والحجامة والعلاج الطبيعي بأحدث التقنيات.',
+    'مركز الوئام الرائد في الخدمات الطبية والتجميلية بالإمارات. 15 سنة خبرة، +2500 عميل راضي، 8 تخصصات طبية. احجز استشارتك المجانية الآن!',
   keywords:
-    'مركز طبي الإمارات, علاجات تجميلية, أمراض جلدية, إزالة الشعر بالليزر, حجامة, العناية بالبشرة, مركز الوئام',
+    'مركز طبي الإمارات, مركز الوئام, علاجات تجميلية دبي, أمراض جلدية, إزالة الشعر بالليزر, حجامة طبية, علاج طبيعي, طب أسنان, عيادة تجميل',
+  openGraph: {
+    title: 'مركز الوئام للصحة الشاملة | أفضل مركز طبي في الإمارات',
+    description: '15 سنة خبرة ✓ أحدث التقنيات ✓ أفضل الأطباء ✓ أسعار تنافسية ✓ استشارة مجانية',
+    type: 'website',
+    locale: 'ar_SA',
+    url: 'https://alweamcentre.com',
+    siteName: 'مركز الوئام',
+  },
+  alternates: {
+    canonical: 'https://alweamcentre.com'
+  }
 };
 
 export default function HomePage() {
-  const services = getServices().slice(0, 6); // Show first 6 services
+  const featuredServices = getServices()
+    .filter(service => ['laser-hair-removal', 'dermatology', 'cupping-therapy', 'physiotherapy'].includes(service.slug));
+  // Show only 4 featured services as previews
 
   return (
-    <main className='medical-gradient-bg min-h-screen'>
+    <>
+      <StructuredData type='organization' />
+      <main className='medical-gradient-bg min-h-screen'>
       {/* Hero Section */}
       <OptimizedHero
         imageType='wellness'
@@ -127,29 +142,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Preview Section */}
-      <section className='py-20'>
+      {/* Featured Services Preview Section */}
+      <section className='py-20 bg-gray-50 dark:bg-gray-900'>
         <div className='mx-auto max-w-7xl px-6'>
           <div className='mb-16 text-center'>
-            <h2 className='medical-section-title'>خدماتنا الطبية المتخصصة</h2>
-            <p className='medical-section-subtitle mx-auto max-w-3xl'>
-              نقدم مجموعة شاملة من الخدمات الطبية والتجميلية المتخصصة باستخدام
-              أحدث التقنيات الطبية
+            <h2 className='mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl'>
+              خدماتنا المميزة
+            </h2>
+            <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300'>
+              اكتشف مجموعة مختارة من خدماتنا الأكثر طلباً والأعلى جودة
             </p>
           </div>
 
-          <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
-            {services.map((service, index) => (
-              <FloatingElement key={service.slug} delay={index * 0.1}>
-                <ImprovedServiceCard service={service} />
-              </FloatingElement>
+          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-4'>
+            {featuredServices.map((service) => (
+              <ServicePreviewCard key={service.slug} service={service} />
             ))}
           </div>
 
-          <div className='mt-12 text-center'>
-            <Link href='/services' className='medical-button-primary'>
-              عرض جميع الخدمات
+          <div className='mt-16 text-center'>
+            <Link 
+              href='/services' 
+              className='inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg'
+            >
+              استكشف جميع خدماتنا
+              <svg className='h-5 w-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
+              </svg>
             </Link>
+            <p className='mt-3 text-sm text-gray-500 dark:text-gray-400'>
+              أكثر من 8 خدمات طبية وتجميلية متخصصة
+            </p>
           </div>
         </div>
       </section>
@@ -175,5 +198,6 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

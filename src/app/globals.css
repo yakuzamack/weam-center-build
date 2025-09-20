@@ -188,55 +188,79 @@ body {
   @apply mb-8 text-xl text-gray-600;
 }
 
-/* Service Card Styling - Matching NHMC Design */
-.service-card {
-  @apply medical-card h-full p-6;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-}
-
-.service-card-icon {
-  @apply mx-auto mb-4 h-16 w-16 rounded-full p-4;
-  background: linear-gradient(
-    135deg,
-    var(--medical-primary-light) 0%,
-    var(--medical-secondary-light) 100%
-  );
-  color: white;
-}
-
-.service-card-title {
-  @apply mb-2 text-xl font-bold text-gray-800;
-}
-
-.service-card-description {
-  @apply mb-4 leading-relaxed text-gray-600;
-}
-
-.service-card-features {
-  @apply mb-6 text-sm text-gray-500;
-}
-
-.service-card-button {
-  @apply medical-button-primary w-full;
-}
-
-/* Header Styling */
+/* Medical Header Styles - Arabic RTL Optimized */
 .medical-header {
-  @apply border-b border-gray-100 bg-white shadow-sm;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
+  @apply bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300;
 }
+
+.dark .medical-header {
+  @apply bg-gray-950/95 border-gray-800;
+}
+
+.medical-header:hover {
+  @apply shadow-md;
+}
+
+/* RTL Layout Improvements */
+[dir="rtl"] .medical-header .flex {
+  direction: rtl;
+}
+
+[dir="rtl"] .medical-header nav {
+  direction: rtl;
+}
+
+/* Logo and Brand Improvements */
+.medical-header .logo-brand {
+  @apply transition-all duration-200;
+}
+
+.medical-header .logo-brand:hover {
+  transform: scale(1.02);
+}
+
+/* Navigation Link Improvements */
+.medical-header nav a {
+  @apply relative;
+}
+
+.medical-header nav a::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200;
+}
+
+.medical-header nav a:hover::after {
+  @apply w-full;
+}
+
+.dark .medical-header nav a::after {
+  @apply bg-blue-400;
+}
+
+/* Mobile Menu Improvements */
+.medical-header #mobile-menu {
+  @apply backdrop-blur-sm;
+}
+
+.medical-header #mobile-menu a {
+  @apply transition-all duration-200;
+}
+
+.medical-header #mobile-menu a:hover {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .medical-header #mobile-menu a:hover {
+  transform: translateX(-4px);
+}
+
 
 /* Footer Styling */
 .medical-footer {
   @apply bg-gray-900 text-white;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -246,10 +270,6 @@ body {
 
   .medical-stats-number {
     @apply text-2xl;
-  }
-
-  .service-card {
-    @apply p-4;
   }
 }
 
@@ -502,9 +522,6 @@ body {
     @apply card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
   }
 
-  .service-card {
-    @apply card-hover relative overflow-hidden border border-gray-200/50 dark:border-gray-700/50;
-  }
 
   .service-image-container {
     @apply relative aspect-[4/3] overflow-hidden;
@@ -608,9 +625,24 @@ body {
   }
 }
 
-.animate-slide-up {
-  animation: slideUp 0.6s ease-out;
-}
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  .floating-element {
+    animation: floatUp 0.8s ease-out;
+  }
+
+  @keyframes floatUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

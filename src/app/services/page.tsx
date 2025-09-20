@@ -1,20 +1,54 @@
-import { FloatingElement } from '@/components/FloatingAnimations';
-import { ImprovedServiceCard } from '@/components/ImprovedServiceCard';
+import { ServiceCard } from '@/components/ServiceCard';
 import { OptimizedHero } from '@/components/OptimizedHero';
+import { StructuredData } from '@/components/StructuredData';
 import { getServices } from '@/data/services';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'الخدمات الطبية والتجميلية - مركز الوئام',
+  title: 'دليل الخدمات الطبية الشامل - مركز الوئام | 8 تخصصات طبية',
   description:
-    'اكتشف مجموعتنا الشاملة من الخدمات الطبية والتجميلية تشمل الأمراض الجلدية وعلاجات الليزر والحجامة وحلول العناية المتقدمة بالبشرة في مركز الوئام.',
+    'استكشف دليلنا الشامل للخدمات الطبية والتجميلية: الأمراض الجلدية، إزالة الشعر بالليزر، الحجامة، العلاج الطبيعي، طب الأسنان، طب الأطفال وأكثر في مركز الوئام بالإمارات.',
+  keywords: [
+    'خدمات طبية الإمارات',
+    'علاجات تجميلية دبي',
+    'إزالة الشعر بالليزر',
+    'أمراض جلدية',
+    'حجامة طبية',
+    'علاج طبيعي',
+    'طب أسنان',
+    'مركز الوئام'
+  ].join(', '),
+  openGraph: {
+    title: 'دليل الخدمات الطبية الشامل - مركز الوئام',
+    description: '8 تخصصات طبية وتجميلية بأحدث التقنيات وأفضل الأسعار في الإمارات',
+    type: 'website',
+    locale: 'ar_SA',
+    url: 'https://alweamcentre.com/services',
+    siteName: 'مركز الوئام',
+    images: [{
+      url: 'https://alweamcentre.com/images/hero-bg.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'خدمات مركز الوئام الطبية والتجميلية'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'دليل الخدمات الطبية الشامل - مركز الوئام',
+    description: '8 تخصصات طبية وتجميلية بأحدث التقنيات في الإمارات'
+  },
+  alternates: {
+    canonical: 'https://alweamcentre.com/services'
+  }
 };
 
 export default function ServicesPage() {
   const services = getServices();
 
   return (
-    <main className='medical-gradient-bg min-h-screen' dir='rtl'>
+    <>
+      <StructuredData type='services' services={services} />
+      <main className='medical-gradient-bg min-h-screen' dir='rtl'>
       {/* Hero Section */}
       <OptimizedHero
         imageType='wellness'
@@ -92,12 +126,38 @@ export default function ServicesPage() {
             </div>
           </div>
 
+          {/* Service Categories */}
+          <div className='mb-12 grid grid-cols-2 gap-4 md:grid-cols-4'>
+            <div className='rounded-xl bg-blue-50 p-4 text-center dark:bg-blue-900/20'>
+              <div className='mb-2 text-2xl font-bold text-blue-600 dark:text-blue-400'>3</div>
+              <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                تخصصات طبية
+              </div>
+            </div>
+            <div className='rounded-xl bg-teal-50 p-4 text-center dark:bg-teal-900/20'>
+              <div className='mb-2 text-2xl font-bold text-teal-600 dark:text-teal-400'>3</div>
+              <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                علاجات تجميلية
+              </div>
+            </div>
+            <div className='rounded-xl bg-green-50 p-4 text-center dark:bg-green-900/20'>
+              <div className='mb-2 text-2xl font-bold text-green-600 dark:text-green-400'>1</div>
+              <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                طب بديل
+              </div>
+            </div>
+            <div className='rounded-xl bg-purple-50 p-4 text-center dark:bg-purple-900/20'>
+              <div className='mb-2 text-2xl font-bold text-purple-600 dark:text-purple-400'>1</div>
+              <div className='text-sm font-medium text-gray-700 dark:text-gray-300'>
+                علاج طبيعي
+              </div>
+            </div>
+          </div>
+
           {/* Services Grid */}
-          <div className='grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
-            {services.map((service, index) => (
-              <FloatingElement key={service.slug} delay={index * 0.1}>
-                <ImprovedServiceCard service={service} />
-              </FloatingElement>
+          <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
+            {services.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
             ))}
           </div>
 
@@ -152,5 +212,6 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
+    </>
   );
 }

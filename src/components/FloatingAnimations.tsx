@@ -16,33 +16,8 @@ export function FloatingElement({
   intensity = 10,
   className = '',
 }: FloatingElementProps) {
-  useEffect(() => {
-    const startTime = Date.now() + delay * 1000;
-    let animationFrame: number;
-
-    const animate = () => {
-      const elapsed = (Date.now() - startTime) / 1000;
-      if (elapsed >= 0) {
-        const newOffsetY = Math.sin(elapsed * 0.5) * intensity;
-        document.documentElement.style.setProperty(
-          '--float-y',
-          `${newOffsetY}px`
-        );
-      }
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-      document.documentElement.style.removeProperty('--float-y');
-    };
-  }, [delay, intensity]);
-
-  return <div className={`floating-element ${className}`}>{children}</div>;
+  // Disable floating animation for service cards to prevent layout issues
+  return <div className={className} style={{ animationDelay: `${delay}s` }}>{children}</div>;
 }
 
 interface ParallaxImageProps {

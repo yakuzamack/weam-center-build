@@ -32,7 +32,7 @@ src/
 ├── components/            # Reusable components
 │   ├── Header.tsx         # Navigation header
 │   ├── Footer.tsx         # Site footer
-│   ├── ServiceCard.tsx    # Service display card
+│   ├── ImprovedServiceCard.tsx    # Service display card
 │   ├── OptimizedImage.tsx # Image optimization
 │   ├── ErrorBoundary.tsx  # Error handling
 │   ├── AccessibilityHelper.tsx # A11y features
@@ -148,7 +148,7 @@ src/
 ```tsx
 // Example test
 import { render, screen } from '@testing-library/react';
-import { ServiceCard } from '@/components/ServiceCard';
+import { ImprovedServiceCard } from '@/components/ImprovedServiceCard';
 
 test('renders service card', () => {
   const service = {
@@ -156,8 +156,11 @@ test('renders service card', () => {
     slug: 'test',
     titleKey: 'test.title',
     descriptionKey: 'test.description',
+    title: 'Test Service',
+    description: 'Test description',
+    image: '/images/services/test.jpg',
   };
-  render(<ServiceCard service={service} locale='en' />);
+  render(<ImprovedServiceCard service={service} />);
   expect(screen.getByText('Test Service')).toBeInTheDocument();
 });
 ```

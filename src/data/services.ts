@@ -3,70 +3,27 @@ export interface Service {
   slug: string;
   titleKey: string;
   descriptionKey: string;
+  title: string;
+  description: string;
+  image: string;
   price?: {
-    from: string;
+    from: number;
     currency: string;
   };
 }
 
 export const services: Service[] = [
   {
-    key: 'generalMedicine',
-    slug: 'general-medicine',
-    titleKey: 'generalMedicine.title',
-    descriptionKey: 'generalMedicine.description',
+    key: 'dermatologyBeauty',
+    slug: 'dermatology-beauty',
+    titleKey: 'dermatologyBeauty.title',
+    descriptionKey: 'dermatologyBeauty.description',
+    title: 'طب الجلدية والتجميل',
+    description:
+      'علاج شامل لجميع مشاكل البشرة والأمراض الجلدية باستخدام أحدث التقنيات الطبية',
+    image: '/images/services/facial-treatments.jpg',
     price: {
-      from: '150',
-      currency: 'AED',
-    },
-  },
-  {
-    key: 'pediatrics',
-    slug: 'pediatrics',
-    titleKey: 'pediatrics.title',
-    descriptionKey: 'pediatrics.description',
-    price: {
-      from: '200',
-      currency: 'AED',
-    },
-  },
-  {
-    key: 'dermatology',
-    slug: 'dermatology',
-    titleKey: 'dermatology.title',
-    descriptionKey: 'dermatology.description',
-    price: {
-      from: '300',
-      currency: 'AED',
-    },
-  },
-  {
-    key: 'orthopedics',
-    slug: 'orthopedics',
-    titleKey: 'orthopedics.title',
-    descriptionKey: 'orthopedics.description',
-    price: {
-      from: '250',
-      currency: 'AED',
-    },
-  },
-  {
-    key: 'dentalCare',
-    slug: 'dental-care',
-    titleKey: 'dentalCare.title',
-    descriptionKey: 'dentalCare.description',
-    price: {
-      from: '200',
-      currency: 'AED',
-    },
-  },
-  {
-    key: 'physiotherapy',
-    slug: 'physiotherapy',
-    titleKey: 'physiotherapy.title',
-    descriptionKey: 'physiotherapy.description',
-    price: {
-      from: '180',
+      from: 300,
       currency: 'AED',
     },
   },
@@ -75,28 +32,64 @@ export const services: Service[] = [
     slug: 'laser-hair-removal',
     titleKey: 'laserHairRemoval.title',
     descriptionKey: 'laserHairRemoval.description',
+    title: 'إزالة الشعر بالليزر',
+    description:
+      'إزالة الشعر الآمنة والفعالة باستخدام أحدث تقنيات الليزر الطبي',
+    image: '/images/services/laser-hair-removal.jpg',
     price: {
-      from: '400',
+      from: 149,
+      currency: 'SAR',
+    },
+  },
+  {
+    key: 'cuppingHijama',
+    slug: 'cupping-hijama',
+    titleKey: 'cuppingHijama.title',
+    descriptionKey: 'cuppingHijama.description',
+    title: 'الحجامة الطبية',
+    description: 'علاج تقليدي فعال لتحسين الدورة الدموية وتخفيف الألم',
+    image: '/images/services/massage.jpg',
+    price: {
+      from: 150,
       currency: 'AED',
     },
   },
   {
-    key: 'cuppingTherapy',
-    slug: 'cupping-therapy',
-    titleKey: 'cuppingTherapy.title',
-    descriptionKey: 'cuppingTherapy.description',
+    key: 'skinCleansing',
+    slug: 'skin-cleansing',
+    titleKey: 'skinCleansing.title',
+    descriptionKey: 'skinCleansing.description',
+    title: 'تنظيف البشرة العميق',
+    description: 'جلسات تنظيف عميق للبشرة لإزالة الشوائب وتجديد خلايا الجلد',
+    image: '/images/services/facial-treatments.jpg',
     price: {
-      from: '150',
+      from: 200,
       currency: 'AED',
     },
   },
   {
-    key: 'skinCare',
-    slug: 'skin-care',
-    titleKey: 'skinCare.title',
-    descriptionKey: 'skinCare.description',
+    key: 'physiotherapy',
+    slug: 'physiotherapy',
+    titleKey: 'physiotherapy.title',
+    descriptionKey: 'physiotherapy.description',
+    title: 'العلاج الطبيعي',
+    description: 'برامج علاج طبيعي متخصصة لتحسين الحركة وتخفيف الألم',
+    image: '/images/services/physio.jpg',
     price: {
-      from: '250',
+      from: 180,
+      currency: 'AED',
+    },
+  },
+  {
+    key: 'massage',
+    slug: 'massage-therapy',
+    titleKey: 'massage.title',
+    descriptionKey: 'massage.description',
+    title: 'العلاج بالتدليك',
+    description: 'جلسات تدليك علاجي واسترخائي لتخفيف التوتر والألم',
+    image: '/images/services/massage.jpg',
+    price: {
+      from: 200,
       currency: 'AED',
     },
   },

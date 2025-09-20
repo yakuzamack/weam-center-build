@@ -6,51 +6,64 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
-    // Check for saved theme preference or default to 'light'
-    const stored = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    const initialTheme = stored || (prefersDark ? 'dark' : 'light');
+    try {
+      // Check for saved theme preference or default to 'light'
+      const stored = localStorage.getItem('theme') as 'light' | 'dark' | null;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+      const initialTheme = stored || (prefersDark ? 'dark' : 'light');
 
-    setTheme(initialTheme);
+      setTheme(initialTheme);
 
-    // Apply theme to document
-    if (initialTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+      // Apply theme to document
+      if (initialTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      setMounted(true);
+    } catch (error) {
+      // Fallback for SSR or when localStorage is not available
+      setTheme('light');
+      setMounted(true);
     }
-
-    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
+    try {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
 
-    // Apply theme to document
-    if (newTheme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+      // Apply theme to document
+      if (newTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (error) {
+      console.error('Failed to toggle theme:', error);
     }
   };
 
   if (!mounted) {
-    return <div className='h-10 w-10 animate-pulse rounded-full bg-gray-100' />;
+    return (
+      <div className='h-10 w-10 animate-pulse rounded-full bg-gray-100 dark:bg-gray-800' />
+    );
   }
 
   return (
     <button
       onClick={toggleTheme}
-      className='rounded-full border border-gray-300 bg-white p-2 transition-colors hover:border-brand-400 hover:bg-brand-50 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-brand-400 dark:hover:bg-brand-900/20'
-      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      className='flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white p-2 transition-all duration-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md dark:border-gray-600 dark:bg-gray-800 dark:hover:border-blue-400 dark:hover:bg-blue-900/20'
+      aria-label={`التبديل إلى الوضع ${theme === 'light' ? 'المظلم' : 'المضيء'}`}
+      title={`التبديل إلى الوضع ${theme === 'light' ? 'المظلم' : 'المضيء'}`}
     >
       {theme === 'light' ? (
         <svg
-          className='h-5 w-5 text-gray-600'
+          className='h-5 w-5 text-gray-600 transition-transform hover:rotate-12'
           fill='none'
           viewBox='0 0 24 24'
           stroke='currentColor'
@@ -64,16 +77,14 @@ export function ThemeToggle() {
         </svg>
       ) : (
         <svg
-          className='h-5 w-5 text-yellow-500'
-          fill='none'
+          className='h-5 w-5 text-yellow-400 transition-transform hover:rotate-12'
+          fill='currentColor'
           viewBox='0 0 24 24'
-          stroke='currentColor'
         >
           <path
-            strokeLinecap='round'
-            strokeLinejoin='round'
-            strokeWidth={2}
-            d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+            fillRule='evenodd'
+            d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z'
+            clipRule='evenodd'
           />
         </svg>
       )}

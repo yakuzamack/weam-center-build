@@ -88,12 +88,11 @@ src/
 ├── components/             # Reusable components
 │   ├── Header.tsx         # Navigation header
 │   ├── Footer.tsx         # Site footer
-│   ├── ServiceCard.tsx    # Service display card
-│   └── PexelsHero.tsx     # Hero section with images
+│   ├── ImprovedServiceCard.tsx    # Service display card
+│   └── OptimizedHero.tsx  # Hero section with optimized images
 ├── data/                  # Static data
 │   └── services.ts        # Service definitions
-├── hooks/                 # Custom React hooks
-│   └── usePexels.ts       # Pexels image integration
+├── hooks/                 # Custom React hooks (removed unused hooks)
 ├── lib/                   # Utility libraries
 │   ├── i18n.ts           # Internationalization
 │   └── pexels.ts         # Pexels API integration
