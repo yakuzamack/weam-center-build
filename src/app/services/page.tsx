@@ -1,4 +1,4 @@
-import { ServiceCard } from '@/components/ServiceCard';
+import { FixedServiceCard } from '@/components/FixedServiceCard';
 import { OptimizedHero } from '@/components/OptimizedHero';
 import { StructuredData } from '@/components/StructuredData';
 import { getServices } from '@/data/services';
@@ -157,7 +157,7 @@ export default function ServicesPage() {
           {/* Services Grid */}
           <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
             {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
+              <FixedServiceCard key={service.slug} service={service} />
             ))}
           </div>
 

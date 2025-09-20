@@ -478,7 +478,7 @@ body {
   text-align: right;
 }
 
-[dir='rtl'] .flex {
+[dir='rtl'] .flex-row-reverse-rtl {
   flex-direction: row-reverse;
 }
 

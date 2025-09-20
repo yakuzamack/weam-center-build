@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface ServiceCardProps {
+interface FixedServiceCardProps {
   service: Service;
 }
 
@@ -58,7 +58,7 @@ const SERVICE_CONTENT: Record<string, { title: string; description: string; cate
   },
 };
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export function FixedServiceCard({ service }: FixedServiceCardProps) {
   const content = SERVICE_CONTENT[service.slug] || {
     title: service.title,
     description: service.description,
@@ -66,10 +66,20 @@ export function ServiceCard({ service }: ServiceCardProps) {
   };
 
   return (
-    <div className="flex h-full w-full">
-      <article className="flex h-full w-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+    <div className="w-full h-full">
+      <article 
+        className="w-full h-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+        style={{ 
+          display: 'flex', 
+          flexDirection: 'column',
+          minHeight: '500px'
+        }}
+      >
         {/* Service Image */}
-        <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-gray-700 dark:to-gray-800">
+        <div 
+          className="relative w-full overflow-hidden bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-gray-700 dark:to-gray-800"
+          style={{ height: '192px' }}
+        >
           {service.image ? (
             <Image
               src={service.image}
@@ -79,7 +89,10 @@ export function ServiceCard({ service }: ServiceCardProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center">
+            <div 
+              className="w-full h-full items-center justify-center"
+              style={{ display: 'flex' }}
+            >
               <div className="rounded-full bg-blue-500 p-4 text-white shadow-lg">
                 <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -106,19 +119,29 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
 
         {/* Card Content */}
-        <div className="flex flex-1 flex-col p-6">
+        <div 
+          className="w-full p-6"
+          style={{ 
+            display: 'flex',
+            flexDirection: 'column',
+            flex: '1'
+          }}
+        >
           {/* Service Title */}
           <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
             {content.title}
           </h3>
 
           {/* Service Description */}
-          <p className="mb-4 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+          <p 
+            className="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300"
+            style={{ flex: '1' }}
+          >
             {content.description}
           </p>
 
           {/* Features */}
-          <div className="mb-4 flex flex-wrap gap-2">
+          <div className="mb-4 gap-2" style={{ display: 'flex', flexWrap: 'wrap' }}>
             <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
               <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -134,10 +157,11 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex gap-3">
+          <div className="gap-3" style={{ display: 'flex' }}>
             <Link
               href={`/services/${service.slug}`}
-              className="flex-1 rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="rounded-lg bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              style={{ flex: '1' }}
             >
               اعرف المزيد
             </Link>
