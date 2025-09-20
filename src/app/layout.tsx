@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://www.alweamenter.ae'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.alweamenter.ae/',
   },
   openGraph: {
     title: 'مركز الوئام - خدمات طبية وتجميلية متميزة في الإمارات',

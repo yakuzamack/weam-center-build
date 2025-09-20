@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Principal Services - High Priority
+# Principal Services - High Priority for SEO
 Allow: /services/laser-hair-removal
 Allow: /services/skin-cleaning
 Allow: /services/hijama-cupping
@@ -18,7 +18,8 @@ Disallow: /api
 Disallow: /_next
 Disallow: /private
 
-# Sitemap location
+# Host and Sitemap URLs
+Host: https://www.alweamenter.ae
 Sitemap: https://www.alweamenter.ae/sitemap.xml
 
 # Crawl delay (optional, in seconds)
