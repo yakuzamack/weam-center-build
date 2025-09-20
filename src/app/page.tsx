@@ -26,8 +26,8 @@ export const metadata = {
 
 export default function HomePage() {
   const featuredServices = getServices()
-    .filter(service => ['laser-hair-removal', 'dermatology', 'cupping-therapy', 'physiotherapy'].includes(service.slug));
-  // Show only 4 featured services as previews
+    .filter(service => ['laser-hair-removal', 'dermatology-beauty', 'cupping-hijama', 'skin-cleansing'].includes(service.slug));
+  // Show our 4 principal services optimized for SEO
 
   return (
     <>
@@ -167,20 +167,101 @@ export default function HomePage() {
         <div className='mx-auto max-w-7xl px-6'>
           <div className='mb-16 text-center'>
             <h2 className='mb-4 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl'>
-              خدماتنا المميزة
+              خدماتنا الرئيسية الأربعة
             </h2>
             <p className='mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300'>
-              اكتشف مجموعة مختارة من خدماتنا الأكثر طلباً والأعلى جودة
+              اكتشف خدماتنا المتخصصة: الليزر، تنظيف البشرة، الحجامة، وطب الجلدية
             </p>
           </div>
 
-          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-4'>
-            {featuredServices.map((service) => (
-              <ServicePreviewCard key={service.slug} service={service} />
-            ))}
+          {/* Principal Services Grid */}
+          <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mb-12'>
+            {/* Laser Hair Removal */}
+            <div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'>
+              <div className='p-6'>
+                <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4'>
+                  <svg className='w-6 h-6 text-blue-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M13 10V3L4 14h7v7l9-11h-7z' />
+                  </svg>
+                </div>
+                <h3 className='font-bold text-xl text-gray-900 dark:text-white mb-3'>
+                  إزالة الشعر بالليزر
+                  <span className='block text-sm font-normal text-gray-500 mt-1'>Laser Hair Removal</span>
+                </h3>
+                <p className='text-gray-600 dark:text-gray-300 mb-4'>
+                  إزالة نهائية وآمنة للشعر بأحدث تقنيات Laser Treatment المتطورة
+                </p>
+                <Link href='/services/laser-hair-removal' className='text-blue-600 hover:text-blue-700 font-semibold'>
+                  اعرف المزيد ←
+                </Link>
+              </div>
+            </div>
+
+            {/* Skin Cleaning */}
+            <div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'>
+              <div className='p-6'>
+                <div className='w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4'>
+                  <svg className='w-6 h-6 text-pink-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' />
+                  </svg>
+                </div>
+                <h3 className='font-bold text-xl text-gray-900 dark:text-white mb-3'>
+                  تنظيف البشرة العميق
+                  <span className='block text-sm font-normal text-gray-500 mt-1'>Deep Skin Cleaning</span>
+                </h3>
+                <p className='text-gray-600 dark:text-gray-300 mb-4'>
+                  تنظيف عميق للمسام وتجديد البشرة باستخدام أحدث تقنيات Facial Treatment
+                </p>
+                <Link href='/services/skin-cleaning' className='text-pink-600 hover:text-pink-700 font-semibold'>
+                  اعرف المزيد ←
+                </Link>
+              </div>
+            </div>
+
+            {/* Hijama Cupping */}
+            <div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'>
+              <div className='p-6'>
+                <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4'>
+                  <svg className='w-6 h-6 text-green-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' />
+                  </svg>
+                </div>
+                <h3 className='font-bold text-xl text-gray-900 dark:text-white mb-3'>
+                  الحجامة الطبية
+                  <span className='block text-sm font-normal text-gray-500 mt-1'>Hijama Cupping</span>
+                </h3>
+                <p className='text-gray-600 dark:text-gray-300 mb-4'>
+                  علاج تقليدي فعال لتحسين الدورة الدموية وتخفيف الألم بتقنية Cupping Therapy
+                </p>
+                <Link href='/services/hijama-cupping' className='text-green-600 hover:text-green-700 font-semibold'>
+                  اعرف المزيد ←
+                </Link>
+              </div>
+            </div>
+
+            {/* Dermatology */}
+            <div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300'>
+              <div className='p-6'>
+                <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>
+                  <svg className='w-6 h-6 text-purple-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z' />
+                  </svg>
+                </div>
+                <h3 className='font-bold text-xl text-gray-900 dark:text-white mb-3'>
+                  طب الجلدية والتجميل
+                  <span className='block text-sm font-normal text-gray-500 mt-1'>Dermatology</span>
+                </h3>
+                <p className='text-gray-600 dark:text-gray-300 mb-4'>
+                  علاج شامل للأمراض الجلدية والتجميل باستخدام أحدث تقنيات Skin Treatment
+                </p>
+                <Link href='/services/dermatology' className='text-purple-600 hover:text-purple-700 font-semibold'>
+                  اعرف المزيد ←
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className='mt-16 text-center'>
+          <div className='text-center'>
             <Link 
               href='/services' 
               className='inline-flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg'
@@ -191,7 +272,7 @@ export default function HomePage() {
               </svg>
             </Link>
             <p className='mt-3 text-sm text-gray-500 dark:text-gray-400'>
-              أكثر من 8 خدمات طبية وتجميلية متخصصة
+              خدماتنا الأربعة الرئيسية: Laser، Skin Cleaning، Hijama، و Dermatology
             </p>
           </div>
         </div>

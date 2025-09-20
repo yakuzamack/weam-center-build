@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Principal Services - High Priority
+Allow: /services/laser-hair-removal
+Allow: /services/skin-cleaning
+Allow: /services/hijama-cupping
+Allow: /services/dermatology
+
+# Other Important Pages
+Allow: /services
+Allow: /about
+Allow: /contact
+
+# Disallow admin/private areas
+Disallow: /admin
+Disallow: /api
+Disallow: /_next
+Disallow: /private
+
+# Sitemap location
+Sitemap: https://weam-center-8wco28g46-xyakuzapro8s-projects.vercel.app/sitemap.xml
+
+# Crawl delay (optional, in seconds)
+Crawl-delay: 1
