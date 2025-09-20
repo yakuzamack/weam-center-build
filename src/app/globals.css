@@ -401,23 +401,45 @@ body {
   }
 
   .offer-pattern {
-    @apply absolute inset-0 opacity-5;
+    @apply absolute inset-0 opacity-10 dark:opacity-5;
     background-image:
       radial-gradient(
-        circle at 20% 50%,
-        rgba(59, 130, 246, 0.3) 0%,
-        transparent 50%
+        circle at 15% 25%,
+        rgba(59, 130, 246, 0.15) 0%,
+        transparent 40%
       ),
       radial-gradient(
-        circle at 80% 20%,
-        rgba(59, 130, 246, 0.3) 0%,
-        transparent 50%
+        circle at 85% 15%,
+        rgba(14, 165, 233, 0.12) 0%,
+        transparent 45%
       ),
       radial-gradient(
-        circle at 40% 80%,
-        rgba(59, 130, 246, 0.3) 0%,
-        transparent 50%
+        circle at 25% 85%,
+        rgba(59, 130, 246, 0.1) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(14, 165, 233, 0.08) 0%,
+        transparent 35%
       );
+    background-size: 300px 300px, 250px 250px, 200px 200px, 180px 180px;
+    animation: subtle-float 20s ease-in-out infinite;
+  }
+
+  @keyframes subtle-float {
+    0%, 100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+      transform: translate(-10px, -5px) rotate(1deg);
+    }
+    50% {
+      transform: translate(5px, -10px) rotate(-0.5deg);
+    }
+    75% {
+      transform: translate(-5px, 5px) rotate(0.5deg);
+    }
   }
 
   .offer-content {
@@ -670,6 +692,10 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .offer-pattern {
+    animation: none !important;
   }
 
   html {
