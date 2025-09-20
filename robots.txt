@@ -1,9 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /private/
-
-Host: https://alweamcentre.com
-Sitemap: https://alweamcentre.com/sitemap.xml
