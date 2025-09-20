@@ -24,3 +24,5 @@ Sitemap: https://www.alweamenter.ae/sitemap.xml
 
 # Crawl delay (optional, in seconds)
 Crawl-delay: 1
+
+# Updated: 2025-09-20 - Fixed domain URLs
