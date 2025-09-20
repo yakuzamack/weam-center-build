@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://alweamcentre.com'),
+  metadataBase: new URL('https://www.alweamenter.ae'),
   alternates: {
     canonical: '/',
   },
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'مركز الوئام - خدمات طبية وتجميلية متميزة في الإمارات',
     description:
       'مركز الوئام للخدمات الطبية والتجميلية المتخصصة في الإمارات. نقدم علاجات الليزر والعناية بالبشرة والحجامة والعلاج الطبيعي بأحدث التقنيات.',
-    url: 'https://alweamcentre.com',
+    url: 'https://www.alweamenter.ae',
     siteName: 'مركز الوئام',
     images: [
       {
@@ -73,6 +73,20 @@ export default function RootLayout({
   return (
     <html lang='ar' dir='rtl'>
       <head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYRXCZZFRK" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CYRXCZZFRK');
+            `,
+          }}
+        />
+        
+        {/* Theme Script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
