@@ -1,5 +1,5 @@
 export async function GET() {
-  const baseUrl = 'https://weam-center-8wco28g46-xyakuzapro8s-projects.vercel.app';
+  const baseUrl = 'https://www.alweamenter.ae';
   
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

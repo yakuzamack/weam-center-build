@@ -19,7 +19,7 @@ Disallow: /_next
 Disallow: /private
 
 # Sitemap location
-Sitemap: https://weam-center-8wco28g46-xyakuzapro8s-projects.vercel.app/sitemap.xml
+Sitemap: https://www.alweamenter.ae/sitemap.xml
 
 # Crawl delay (optional, in seconds)
 Crawl-delay: 1
