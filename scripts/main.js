@@ -306,6 +306,174 @@
         }
     }
     
+    // Mobile-responsive map handling
+    function initMobileMapHandling() {
+        const mapContainers = document.querySelectorAll('.map-container');
+        
+        mapContainers.forEach(function(container) {
+            const iframe = container.querySelector('iframe');
+            if (!iframe) return;
+            
+            // Add touch handling for mobile
+            container.addEventListener('click', function() {
+                iframe.style.pointerEvents = 'auto';
+            });
+            
+            // Reset pointer events when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!container.contains(e.target)) {
+                    iframe.style.pointerEvents = 'none';
+                }
+            });
+            
+            // Better mobile experience
+            if (window.innerWidth <= 768) {
+                iframe.style.pointerEvents = 'none';
+                
+                const overlay = container.querySelector('.map-overlay');
+                if (overlay) {
+                    overlay.style.cursor = 'pointer';
+                    overlay.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        iframe.style.pointerEvents = 'auto';
+                        setTimeout(() => {
+                            iframe.style.pointerEvents = 'none';
+                        }, 5000);
+                    });
+                }
+            }
+        });
+    }
+    
+    // Language detection and direction handling
+    function initLanguageSupport() {
+        const html = document.documentElement;
+        const isRTL = html.dir === 'rtl' || html.lang === 'ar';
+        
+        // Add language-specific classes
+        document.body.classList.add(isRTL ? 'rtl-layout' : 'ltr-layout');
+        
+        // Adjust animations for RTL
+        if (isRTL) {
+            const style = document.createElement('style');
+            style.textContent = `
+                .service-link::before {
+                    content: '←';
+                }
+                .nav-menu {
+                    flex-direction: row-reverse;
+                }
+                .hero-actions {
+                    justify-content: flex-end;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+    }
+    
+    // Enhanced form validation for Arabic content
+    function initEnhancedFormHandling() {
+        const forms = document.querySelectorAll('form');
+        
+        forms.forEach(function(form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for Arabic/English content validation
+                const inputs = form.querySelectorAll('input[type="text"], textarea');
+                let hasValidation = false;
+                
+                inputs.forEach(function(input) {
+                    const value = input.value.trim();
+                    if (value) {
+                        // Basic validation for both languages
+                        const hasArabic = /[\u0600-\u06FF]/.test(value);
+                        const hasLatin = /[a-zA-Z]/.test(value);
+                        
+                        if (hasArabic || hasLatin) {
+                            hasValidation = true;
+                            input.classList.remove('error');
+                        } else {
+                            input.classList.add('error');
+                        }
+                    }
+                });
+                
+                if (hasValidation) {
+                    const formData = new FormData(form);
+                    const button = form.querySelector('button[type="submit"], input[type="submit"]');
+                    
+                    if (button) {
+                        button.classList.add('loading');
+                        button.disabled = true;
+                        
+                        // Simulate form submission
+                        setTimeout(function() {
+                            button.classList.remove('loading');
+                            button.disabled = false;
+                            
+                            // Show success message in appropriate language
+                            const isArabicPage = document.documentElement.lang === 'ar';
+                            const message = isArabicPage ? 
+                                'شكراً لك! تم إرسال رسالتك بنجاح.' : 
+                                'Thank you! Your message has been sent successfully.';
+                            
+                            showNotification(message, 'success');
+                            form.reset();
+                        }, 2000);
+                    }
+                }
+            });
+        });
+    }
+    
+    // FAQ accordion functionality
+    function initFAQAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(function(item, index) {
+            const question = item.querySelector('h3');
+            const answer = item.querySelector('p');
+            
+            if (question && answer) {
+                // Make questions clickable
+                question.style.cursor = 'pointer';
+                question.style.position = 'relative';
+                
+                // Add expand/collapse icon
+                const icon = document.createElement('i');
+                icon.className = 'fas fa-chevron-down';
+                icon.style.position = 'absolute';
+                icon.style.right = document.documentElement.dir === 'rtl' ? '0' : 'auto';
+                icon.style.left = document.documentElement.dir === 'rtl' ? 'auto' : '0';
+                icon.style.top = '50%';
+                icon.style.transform = 'translateY(-50%)';
+                icon.style.transition = 'transform 0.3s ease';
+                question.appendChild(icon);
+                
+                // Initially collapse answers (except first one)
+                if (index > 0) {
+                    answer.style.maxHeight = '0';
+                    answer.style.overflow = 'hidden';
+                    answer.style.transition = 'max-height 0.3s ease';
+                    icon.style.transform = 'translateY(-50%) rotate(-90deg)';
+                }
+                
+                question.addEventListener('click', function() {
+                    const isCollapsed = answer.style.maxHeight === '0px';
+                    
+                    if (isCollapsed) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'translateY(-50%) rotate(0deg)';
+                    } else {
+                        answer.style.maxHeight = '0';
+                        icon.style.transform = 'translateY(-50%) rotate(-90deg)';
+                    }
+                });
+            }
+        });
+    }
+    
     // Initialize all functionality when DOM is ready
     function init() {
         // Check if DOM is already loaded
@@ -323,11 +491,14 @@
         initMobileNavigation();
         initSmoothScrolling();
         initNavbarScrollEffect();
-        initFormHandling();
+        initEnhancedFormHandling(); // Use enhanced version
         initLazyLoading();
         initScrollAnimations();
         initAccessibility();
         initPerformanceMonitoring();
+        initLanguageSupport(); // Add language support
+        initMobileMapHandling(); // Add mobile map handling
+        initFAQAccordion(); // Add FAQ functionality
         
         // Add loaded class to body for CSS animations
         document.body.classList.add('js-loaded');
