@@ -3,6 +3,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "public": true,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
