@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Al Weam Center - Comprehensive Health Care in Ras Al Khaimah | مركز الوئام</title>
+    <meta name="description" content="Leading medical center in Ras Al Khaimah, UAE offering dermatology, laser hair removal, skin care, hijama therapy, and wellness treatments. مركز طبي رائد في رأس الخيمة للرعاية الصحية الشاملة">
+    <meta name="keywords" content="medical center UAE, laser hair removal Ras Al Khaimah, dermatology clinic, skin care, hijama therapy, wellness center, مركز طبي, إزالة الشعر بالليزر, العناية بالبشرة, الحجامة">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Al Weam Center for Comprehensive Health">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://alweamcenter.com/">
+    <meta property="og:title" content="Al Weam Center - Comprehensive Health Care in Ras Al Khaimah">
+    <meta property="og:description" content="Leading medical center in Ras Al Khaimah, UAE offering dermatology, laser hair removal, skin care, hijama therapy, and wellness treatments.">
+    <meta property="og:image" content="https://alweamcenter.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://alweamcenter.com/">
+    <meta property="twitter:title" content="Al Weam Center - Comprehensive Health Care in Ras Al Khaimah">
+    <meta property="twitter:description" content="Leading medical center in Ras Al Khaimah, UAE offering dermatology, laser hair removal, skin care, hijama therapy, and wellness treatments.">
+    <meta property="twitter:image" content="https://alweamcenter.com/assets/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alweamcenter.com/">
+    
+    <!-- Language alternatives -->
+    <link rel="alternate" hreflang="en" href="https://alweamcenter.com/pages/en/">
+    <link rel="alternate" hreflang="ar" href="https://alweamcenter.com/pages/ar/">
+    <link rel="alternate" hreflang="x-default" href="https://alweamcenter.com/">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./styles/en/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8f9fa}
+        .loader{position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;display:flex;justify-content:center;align-items:center;z-index:9999}
+        .spinner{width:40px;height:40px;border:4px solid #e3e3e3;border-top:4px solid #0066cc;border-radius:50%;animation:spin 1s linear infinite}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+        .redirect-container{text-align:center;padding:50px 20px;max-width:600px;margin:0 auto}
+        .language-selector{margin-top:30px}
+        .btn{display:inline-block;padding:12px 24px;margin:10px;text-decoration:none;border-radius:5px;font-weight:500;transition:all 0.3s}
+        .btn-primary{background:#0066cc;color:white}.btn-primary:hover{background:#0052a3}
+        .btn-success{background:#28a745;color:white}.btn-success:hover{background:#1e7e34}
+    </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Al Weam Center for Comprehensive Health",
+        "alternateName": "مركز الوئام للصحة الشاملة",
+        "url": "https://alweamcenter.com",
+        "logo": "https://alweamcenter.com/assets/logos/logo.png",
+        "image": "https://alweamcenter.com/assets/images/clinic-exterior.jpg",
+        "description": "Leading medical center in Ras Al Khaimah, UAE offering comprehensive health care services including dermatology, laser treatments, and wellness therapies.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ras Al Khaimah",
+            "addressLocality": "Ras Al Khaimah",
+            "addressCountry": "AE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "25.7877",
+            "longitude": "55.9304"
+        },
+        "medicalSpecialty": [
+            "Dermatology",
+            "Laser Hair Removal",
+            "Skin Care",
+            "Hijama Therapy",
+            "Wellness Treatments"
+        ],
+        "paymentAccepted": ["Cash", "Credit Card", "Insurance"],
+        "currenciesAccepted": "AED",
+        "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- Smart Language Detection -->
+    <script>
+        (function() {
+            'use strict';
+            
+            // Performance-optimized language detection
+            function detectLanguage() {
+                const browserLangs = navigator.languages || [navigator.language || 'en'];
+                const isArabic = browserLangs.some(lang => 
+                    lang.toLowerCase().startsWith('ar') || 
+                    lang.includes('arab')
+                );
+                
+                // Use replace for better SEO (no back button history)
+                const targetUrl = isArabic ? './pages/ar/index.html' : './pages/en/index.html';
+                
+                // Add small delay for better UX
+                setTimeout(() => {
+                    window.location.replace(targetUrl);
+                }, 500);
+            }
+            
+            // Execute when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', detectLanguage);
+            } else {
+                detectLanguage();
+            }
+        })();
+    </script>
+    
+    <!-- Fallback for no-JS users -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./pages/en/index.html">
+    </noscript>
+</head>
+<body>
+    <!-- Loading indicator -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Fallback content -->
+    <div class="redirect-container">
+        <h1>Al Weam Center for Comprehensive Health</h1>
+        <h2 dir="rtl">مركز الوئام للصحة الشاملة</h2>
+        
+        <p>Welcome to Al Weam Center - Your trusted partner for comprehensive health care in Ras Al Khaimah, UAE.</p>
+        <p dir="rtl">مرحباً بكم في مركز الوئام - شريككم الموثوق للرعاية الصحية الشاملة في رأس الخيمة، الإمارات العربية المتحدة.</p>
+        
+        <p>Redirecting to our website...</p>
+        <p>If you are not redirected automatically, please choose your language:</p>
+        
+        <div class="language-selector">
+            <a href="./pages/en/index.html" class="btn btn-primary" aria-label="Continue in English">
+                🇺🇸 English
+            </a>
+            <a href="./pages/ar/index.html" class="btn btn-success" aria-label="متابعة بالعربية">
+                🇦🇪 العربية
+            </a>
+        </div>
+        
+        <!-- Contact info for accessibility -->
+        <div style="margin-top: 40px; font-size: 14px; color: #666;">
+            <p>📍 Ras Al Khaimah, UAE</p>
+            <p>📞 Contact us for appointments</p>
+            <p>🕒 Open daily for your convenience</p>
+        </div>
+    </div>
+    
+    <!-- Hide loader after page loads -->
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

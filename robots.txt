@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Optimize crawling
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /*.json$
+Disallow: /assets/icons/
+Allow: /assets/images/
+Allow: /pages/
+
+# Sitemap location
+Sitemap: https://alweamcenter.com/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

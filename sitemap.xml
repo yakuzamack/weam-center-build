@@ -1,153 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://alweamcentre.com</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>daily</changefreq>
-<priority>1</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.8</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/contact</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/contact</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/general-medicine</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/general-medicine</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/pediatrics</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/pediatrics</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/dermatology</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/dermatology</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/orthopedics</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/orthopedics</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/dental-care</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/dental-care</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/physiotherapy</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/physiotherapy</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/laser-hair-removal</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/laser-hair-removal</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/cupping-therapy</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/cupping-therapy</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/en/services/skin-care</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://alweamcentre.com/ar/services/skin-care</loc>
-<lastmod>2025-09-18T22:30:00.000Z</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.6</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Main homepage -->
+    <url>
+        <loc>https://alweamcenter.com/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://alweamcenter.com/pages/en/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://alweamcenter.com/pages/ar/"/>
+    </url>
+    
+    <!-- English pages -->
+    <url>
+        <loc>https://alweamcenter.com/pages/en/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://alweamcenter.com/pages/en/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://alweamcenter.com/pages/ar/"/>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/services/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/laser-hair-removal/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/dermatology/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/skin-care/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/hijama-therapy/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/about/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/en/contact/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Arabic pages -->
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://alweamcenter.com/pages/en/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://alweamcenter.com/pages/ar/"/>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/services/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/laser-hair-removal/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/dermatology/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/skin-care/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/hijama-therapy/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/about/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://alweamcenter.com/pages/ar/contact/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
 </urlset>

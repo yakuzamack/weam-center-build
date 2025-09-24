@@ -1,9 +1,0 @@
-<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="20" fill="#7C3AED" />
-  <path d="M37.6211 91V37.8H52.5011L65.4251 72.248H66.9131L79.7731 37.8H94.6531V91H83.1531V54.616H82.0011L70.1131 87.064H62.2251L50.2731 54.492H49.1211V91H37.6211Z" fill="white"/>
-  <style>
-    @media (prefers-color-scheme: dark) {
-      rect { fill: #6D28D9; }
-    }
-  </style>
-</svg>
